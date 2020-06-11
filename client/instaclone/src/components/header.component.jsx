@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, OptionsContainer, Icon, Avatar } from './header.styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
+import { Container, OptionsContainer, IconContainer, Icon, Avatar } from './header.styles';
+import { faPaperPlane, faCompass, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     return (
@@ -9,16 +9,16 @@ const Header = () => {
             <h3>Instagram</h3>
             <input type="text" placeholder="Search" />
             <OptionsContainer>
-                <Icon>
-                    <FontAwesomeIcon icon={faPaperPlane} size="lg"/>
-                </Icon>
-                <Icon>
-                    <FontAwesomeIcon icon={faPaperPlane} size="lg"/>
-                </Icon><Icon>
-                    <FontAwesomeIcon icon={faPaperPlane} size="lg"/>
-                </Icon><Icon>
-                    <FontAwesomeIcon icon={faPaperPlane} size="lg"/>
-                </Icon>
+                <IconContainer>
+                    <Icon icon={faHome} size="2x"/>
+                </IconContainer>
+                <IconContainer>
+                    <Icon icon={faPaperPlane} size="2x"/>
+                </IconContainer><IconContainer>
+                    <Icon icon={faCompass} size="2x"/>
+                </IconContainer><IconContainer>
+                    <Icon icon={faHeart} size="2x"/>
+                </IconContainer>
                 <Avatar />
             </OptionsContainer>
 
