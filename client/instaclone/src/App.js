@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/header.component';
+import Header from './components/header/header.component';
+import FeedPage from './pages/feed-page/feed-page.component';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
+      <FeedPage />
     </div>
   );
 }
