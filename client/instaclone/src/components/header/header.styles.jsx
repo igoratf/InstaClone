@@ -21,12 +21,14 @@ font-size: 12px;
 `
 
 export const Icon = styled(FontAwesomeIcon)`
+padding: 0
 &:hover {
     cursor: pointer;
 }
 `
 
 export const Avatar = styled.div`
+margin: 0 10px;
 height: 25px;
 width: 25px;
 border: 1px solid black;    
