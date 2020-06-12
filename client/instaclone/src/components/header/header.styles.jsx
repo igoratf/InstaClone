@@ -18,6 +18,13 @@ align-items: center;
 export const IconContainer = styled.div`
 padding: 0 15px;
 font-size: 12px;
+
+`
+
+export const IconWrapper = styled.div`
+&:hover {
+    cursor: pointer;
+}
 `
 
 export const Icon = styled(FontAwesomeIcon)`
