@@ -9,7 +9,8 @@ import {
   IconContainer,
   IconWrapper,
   Icon,
-  Avatar,
+  AvatarPic,
+  LogoImage
 } from "./header.styles";
 
 import IconButton from "@material-ui/core/IconButton";
@@ -21,8 +22,6 @@ import {
   faHeart,
 } from "@fortawesome/free-regular-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-
-import { LogoImage } from './header.styles';
 
 const Header = () => {
   return (
@@ -41,15 +40,13 @@ const Header = () => {
         <IconContainer>
           <Icon icon={faCompass} style={{fontSize: '20px'}} />
         </IconContainer>
-        <IconContainer>
-            <IconWrapper>
-                <FavoriteBorderIcon />
-            </IconWrapper>
+        <IconContainer style={{paddingRight: '16px'}}>
+            <FavoriteBorderIcon />
         </IconContainer>
-        {/* <IconContainer>
-          <Icon icon={faHeart} size="lg" />
-        </IconContainer> */}
-        <Avatar />
+        <AvatarPic
+            aria-label="recipe"
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4"
+        />
       </OptionsContainer>
     </Container>
   );

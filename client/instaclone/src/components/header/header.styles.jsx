@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Avatar from '@material-ui/core/Avatar';
 
 export const Container = styled.div`
 display: flex;
@@ -17,9 +18,14 @@ align-items: center;
 `
 
 export const IconContainer = styled.div`
-padding: 0 15px;
+padding: 0 5px;
 font-size: 12px;
-
+height: 54px;
+width: 48px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 `
 
 export const IconWrapper = styled.div`
@@ -29,16 +35,13 @@ export const IconWrapper = styled.div`
 `
 
 export const Icon = styled(FontAwesomeIcon)`
-padding: 0
+padding: 0;
 &:hover {
     cursor: pointer;
 }
 `
 
-export const Avatar = styled.div`
-margin: 0 10px;
-height: 25px;
-width: 25px;
-border: 1px solid black;    
-border-radius: 50%;
+export const AvatarPic = styled(Avatar)`
+height: 25px!important;
+width: 25px!important;
 `
