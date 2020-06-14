@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import Button from '@material-ui/core/Button';
 
 export const FormContainer = styled.form`
 display: flex;
@@ -18,4 +20,12 @@ max-height: 80px;
 border: none; 
 outline: none; 
 resize: none;
+`;
+
+export const PostButton = styled(Button)`
+text-transform: none!important;
+opacity: ${props => props.disabled ? 0.3 : 1};
+color: #1696f6!important;
+
+
 `

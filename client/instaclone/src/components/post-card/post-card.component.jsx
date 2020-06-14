@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
@@ -10,14 +10,13 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 
-import { FormContainer, OptionsIcon, CommentTextArea } from './post-card.styles';
+import { FormContainer, OptionsIcon, CommentTextArea, PostButton } from './post-card.styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,13 +41,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const PostCard = () => {
+  const [text, setText] = useState(null);
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  useEffect(() => {
 
-  };
+  }, [text])
+
+
+  const onChangeText = (event) => {
+    setText(event.target.value);
+  }
 
   return (
     <Card style={{ width: "500px", margin: '20px 0' }}>
@@ -96,10 +99,10 @@ const PostCard = () => {
       </CardActions>
       <CardActions>
         <FormContainer>
-          <CommentTextArea rows="1" placeholder="Add a comment..."></CommentTextArea>
-          <Button href="#text-buttons" color="primary">
+          <CommentTextArea rows="1" placeholder="Add a comment..." onChange={(event) => onChangeText(event)}></CommentTextArea>
+          <PostButton disabled={!text}>
         Post
-      </Button>
+      </PostButton>
         </FormContainer>
         
       </CardActions>
