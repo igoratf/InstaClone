@@ -1,4 +1,7 @@
 import React from "react";
+
+import Logo from '../../assets/logo.png';
+
 import HomeIcon from "@material-ui/icons/Home";
 import {
   Container,
@@ -19,30 +22,32 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
+import { LogoImage } from './header.styles';
+
 const Header = () => {
   return (
     <Container>
-      <h3>Instagram</h3>
+      <LogoImage src={Logo} />
       <input type="text" placeholder="Search" />
       <OptionsContainer>
         <IconContainer>
           <IconWrapper>
-            <HomeIcon fontSize="large" />
+            <HomeIcon  />
           </IconWrapper>
         </IconContainer>
         <IconContainer>
-          <Icon icon={faPaperPlane} size="2x" />
-        </IconContainer>
+          <Icon icon={faPaperPlane}  style={{fontSize: '18px'}}/>
+        </IconContainer >
         <IconContainer>
-          <Icon icon={faCompass} size="2x" />
+          <Icon icon={faCompass} style={{fontSize: '20px'}} />
         </IconContainer>
         <IconContainer>
             <IconWrapper>
-                <FavoriteBorderIcon style={{fontSize: 30}}/>
+                <FavoriteBorderIcon />
             </IconWrapper>
         </IconContainer>
         {/* <IconContainer>
-          <Icon icon={faHeart} size="2x" />
+          <Icon icon={faHeart} size="lg" />
         </IconContainer> */}
         <Avatar />
       </OptionsContainer>

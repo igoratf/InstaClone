@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Container = styled.div`
 display: flex;
 justify-content: space-evenly;
 align-items: center;
 border-bottom: 1px solid lightgray;
-`
+`;
+
+export const LogoImage = styled.img``
 
 export const OptionsContainer = styled.div`
 display: flex;

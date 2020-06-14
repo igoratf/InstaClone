@@ -15,7 +15,6 @@ export const BorderWrapper = styled.div`
 padding: 1px;
 border-radius: 50%;
 background: linear-gradient(#ca4b8e, #f18639, #e24464, #da497d, #c74c92);
-backgr
 `
 
 
