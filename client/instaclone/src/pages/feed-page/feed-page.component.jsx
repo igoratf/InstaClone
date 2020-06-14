@@ -9,6 +9,8 @@ export default function FeedPage() {
             <StoryContainer />
             <PostContainer>
                 <PostCard />
+                <PostCard />
+                <PostCard />
             </PostContainer>
         </Container>
     )

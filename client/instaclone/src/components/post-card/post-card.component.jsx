@@ -6,24 +6,23 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
+import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 
-import ShareIcon from "@material-ui/icons/Share";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import { FormContainer, OptionsIcon, CommentTextArea } from './post-card.styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 500,
-    textAlign: "left"
+    textAlign: "left",
   },
   media: {
     height: 0,
@@ -39,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   expandOpen: {
     transform: "rotate(180deg)",
-  }
+  },
 }));
 
 const PostCard = () => {
@@ -48,19 +47,24 @@ const PostCard = () => {
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+
   };
 
   return (
-    <Card style={{width: '500px'}}>
-      <CardHeader className={classes.root}
+    <Card style={{ width: "500px", margin: '20px 0' }}>
+      <CardHeader
+        className={classes.root}
         avatar={
-          <Avatar aria-label="recipe" src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4">
+          <Avatar
+            aria-label="recipe"
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4"
+          >
             A
           </Avatar>
         }
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            <OptionsIcon />
           </IconButton>
         }
         title="Ada Meira"
@@ -84,21 +88,20 @@ const PostCard = () => {
           <ChatBubbleOutlineIcon />
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          <SendOutlinedIcon />
         </IconButton>
-        {/* <IconButton>
-          <FontAwesomeIcon icon={faPaperPlane}/>
-        </IconButton> */}
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
+        <IconButton aria-label="bookmark" style={{marginLeft: 'auto'}}>
+          <BookmarkBorderIcon/>
         </IconButton>
+      </CardActions>
+      <CardActions>
+        <FormContainer>
+          <CommentTextArea rows="1" placeholder="Add a comment..."></CommentTextArea>
+          <Button href="#text-buttons" color="primary">
+        Post
+      </Button>
+        </FormContainer>
+        
       </CardActions>
     </Card>
   );
