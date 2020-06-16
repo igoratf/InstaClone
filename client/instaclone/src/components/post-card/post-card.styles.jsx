@@ -26,6 +26,12 @@ export const PostButton = styled(Button)`
 text-transform: none!important;
 opacity: ${props => props.disabled ? 0.3 : 1};
 color: #1696f6!important;
+`;
 
-
+export const CommentsContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: flex-start;
 `
+

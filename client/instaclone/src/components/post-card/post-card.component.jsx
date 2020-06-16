@@ -8,15 +8,16 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import TextField from '@material-ui/core/TextField';
+import Divider from '@material-ui/core/Divider';  
+
+import Comment from '../comment/comment.component';
 
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 
-import { FormContainer, OptionsIcon, CommentTextArea, PostButton } from './post-card.styles';
+import { FormContainer, OptionsIcon, CommentTextArea, PostButton, CommentsContainer } from './post-card.styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,6 +40,21 @@ const useStyles = makeStyles((theme) => ({
     transform: "rotate(180deg)",
   },
 }));
+
+const comments = [
+  {
+    author: 'teste',
+    content: 'Testando comentário'
+  },
+  {
+    author: 'teste',
+    content: 'Testando comentário'
+  },
+  {
+    author: 'teste',
+    content: 'Testando comentário'
+  }
+]
 
 const PostCard = () => {
   const [text, setText] = useState(null);
@@ -78,11 +94,6 @@ const PostCard = () => {
         image="https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
         title="Photo"
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          Meu namorado é muito lindo
-        </Typography>
-      </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteBorderIcon />
@@ -97,6 +108,12 @@ const PostCard = () => {
           <BookmarkBorderIcon/>
         </IconButton>
       </CardActions>
+      <CardContent>
+        <CommentsContainer>
+          {comments.map(comment => <Comment {...comment} />)}
+        </CommentsContainer>
+      </CardContent>
+      <Divider light />
       <CardActions>
         <FormContainer>
           <CommentTextArea rows="1" placeholder="Add a comment..." onChange={(event) => onChangeText(event)}></CommentTextArea>
@@ -104,7 +121,6 @@ const PostCard = () => {
         Post
       </PostButton>
         </FormContainer>
-        
       </CardActions>
     </Card>
   );
