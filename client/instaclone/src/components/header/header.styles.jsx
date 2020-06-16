@@ -29,16 +29,12 @@ align-items: center;
 `
 
 export const IconWrapper = styled.div`
-&:hover {
-    cursor: pointer;
-}
+cursor: pointer;
 `
 
 export const Icon = styled(FontAwesomeIcon)`
 padding: 0;
-&:hover {
-    cursor: pointer;
-}
+cursor: pointer;
 `
 
 export const AvatarPic = styled(Avatar)`

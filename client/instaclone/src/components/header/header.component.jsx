@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from '../../assets/logo.png';
+import Logo from "../../assets/logo.png";
 
 import HomeIcon from "@material-ui/icons/Home";
 import {
@@ -10,15 +10,12 @@ import {
   IconWrapper,
   Icon,
   AvatarPic,
-  LogoImage
+  LogoImage,
 } from "./header.styles";
 
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
-import {
-  faPaperPlane,
-  faCompass
-} from "@fortawesome/free-regular-svg-icons";
+import { faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
 
 const Header = () => {
   return (
@@ -28,21 +25,23 @@ const Header = () => {
       <OptionsContainer>
         <IconContainer>
           <IconWrapper>
-            <HomeIcon  />
+            <HomeIcon />
           </IconWrapper>
         </IconContainer>
         <IconContainer>
-          <Icon icon={faPaperPlane}  style={{fontSize: '18px'}}/>
-        </IconContainer >
-        <IconContainer>
-          <Icon icon={faCompass} style={{fontSize: '20px'}} />
+          <Icon icon={faPaperPlane} style={{ fontSize: "18px" }} />
         </IconContainer>
-        <IconContainer style={{paddingRight: '16px'}}>
+        <IconContainer>
+          <Icon icon={faCompass} style={{ fontSize: "20px" }} />
+        </IconContainer>
+        <IconContainer style={{ paddingRight: "16px" }}>
+          <IconWrapper>
             <FavoriteBorderIcon />
+          </IconWrapper>
         </IconContainer>
         <AvatarPic
-            aria-label="recipe"
-            src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4"
+          aria-label="recipe"
+          src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4"
         />
       </OptionsContainer>
     </Container>
