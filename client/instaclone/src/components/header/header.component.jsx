@@ -13,15 +13,12 @@ import {
   LogoImage
 } from "./header.styles";
 
-import IconButton from "@material-ui/core/IconButton";
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 import {
   faPaperPlane,
-  faCompass,
-  faHeart,
+  faCompass
 } from "@fortawesome/free-regular-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (

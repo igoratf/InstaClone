@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 export const Container = styled.div`
 display: flex;
@@ -33,4 +34,10 @@ cursor: pointer;
 &:hover {
     color: red;
 }
+`;
+
+export const LikeButtonFilled = styled(FavoriteIcon)`
+font-size: 14px!important;
+color: red;
+cursor:pointer;
 `

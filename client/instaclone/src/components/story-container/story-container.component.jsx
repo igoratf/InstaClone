@@ -12,7 +12,6 @@ export default function StoryContainer() {
             <StoryIcon />
             <StoryIcon />
             <StoryIcon />
-            <StoryIcon />
         </Container>
     )
 }

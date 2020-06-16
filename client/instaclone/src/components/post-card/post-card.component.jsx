@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -8,7 +7,8 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
-import Divider from '@material-ui/core/Divider';  
+import Divider from '@material-ui/core/Divider';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 import Comment from '../comment/comment.component';
 
@@ -43,22 +43,33 @@ const useStyles = makeStyles((theme) => ({
 
 const comments = [
   {
+    id: 1,
     author: 'teste',
     content: 'Testando comentário'
   },
   {
+    id: 2,
     author: 'teste',
     content: 'Testando comentário'
   },
   {
+    id: 3,
     author: 'teste',
     content: 'Testando comentário'
   }
-]
+];
+
+const lastId = 4;
 
 const PostCard = () => {
-  const [text, setText] = useState(null);
+  const [text, setText] = useState('');
+  const [commentList, setCommentList] = useState(comments);
+  const [liked, setLiked] = useState(false);
   const classes = useStyles();
+
+  const likePost = () => {
+    setLiked(!liked);
+  }
 
   useEffect(() => {
 
@@ -69,6 +80,17 @@ const PostCard = () => {
     setText(event.target.value);
   }
 
+  const postComment = () => {
+    let comment = {
+      id: lastId,
+      author: 'teste',
+      content: text
+    }
+
+    setCommentList([...commentList, comment]);
+    setText('');
+  }
+
   return (
     <Card style={{ width: "500px", margin: '20px 0' }}>
       <CardHeader
@@ -77,9 +99,7 @@ const PostCard = () => {
           <Avatar
             aria-label="recipe"
             src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4"
-          >
-            A
-          </Avatar>
+          />
         }
         action={
           <IconButton aria-label="settings">
@@ -95,8 +115,8 @@ const PostCard = () => {
         title="Photo"
       />
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteBorderIcon />
+        <IconButton aria-label="add to favorites" onClick={likePost}>
+          {liked ? <FavoriteIcon style={{color: 'red'}}/> : <FavoriteBorderIcon />}
         </IconButton>
         <IconButton>
           <ChatBubbleOutlineIcon />
@@ -110,14 +130,14 @@ const PostCard = () => {
       </CardActions>
       <CardContent>
         <CommentsContainer>
-          {comments.map(comment => <Comment {...comment} />)}
+          {commentList.map((comment, index) => <Comment {...comment} key={index}/>)}
         </CommentsContainer>
       </CardContent>
       <Divider light />
       <CardActions>
         <FormContainer>
-          <CommentTextArea rows="1" placeholder="Add a comment..." onChange={(event) => onChangeText(event)}></CommentTextArea>
-          <PostButton disabled={!text}>
+          <CommentTextArea rows="1" placeholder="Add a comment..." value={text} onChange={(event) => onChangeText(event)}></CommentTextArea>
+          <PostButton disabled={!text} onClick={postComment}>
         Post
       </PostButton>
         </FormContainer>
