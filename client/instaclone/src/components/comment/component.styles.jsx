@@ -27,17 +27,21 @@ margin-left: auto;
 `;
 
 export const LikeButton = styled(FavoriteBorderIcon)`
-font-size: 14px!important;
-color: gray;
-cursor: pointer;
+&& {
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
 
-&:hover {
-    color: red;
+    &:hover {
+        color: red;
+    }
 }
 `;
 
 export const LikeButtonFilled = styled(FavoriteIcon)`
-font-size: 14px!important;
-color: red;
-cursor:pointer;
+&& {
+    font-size: 14px;
+    color: red;
+    cursor:pointer;
+}
 `

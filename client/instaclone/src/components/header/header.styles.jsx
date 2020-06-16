@@ -21,7 +21,7 @@ export const IconContainer = styled.div`
 padding: 0 5px;
 font-size: 12px;
 height: 54px;
-width: 48px;
+width: 30px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -38,6 +38,8 @@ cursor: pointer;
 `
 
 export const AvatarPic = styled(Avatar)`
-height: 25px!important;
-width: 25px!important;
+&& {
+    height: 25px;
+    width: 25px;
+}
 `
