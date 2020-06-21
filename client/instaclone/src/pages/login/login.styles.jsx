@@ -1,17 +1,33 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Logo from '../../assets/logo.png';
 
 import Button from "@material-ui/core/Button";
+import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import Paper from '@material-ui/core/Paper';
 import { OutlinedInput } from '@material-ui/core';
 
 const primaryColor = "#1095f6";
 
+const anchorStyles = css`
+cursor: pointer;
+
+&:hover {
+    text-decoration: underline;
+}
+`;
+
+const cardSize = css`
+width: 40vw;
+`
+
 export const Container = styled.div`
 display: flex;
+background-color: #fafafa;
+flex-direction: column;
 justify-content: center;
 align-items: center;
+height: 100%;
 `;
 
 export const LoginContainer = styled(Paper)`
@@ -19,9 +35,10 @@ export const LoginContainer = styled(Paper)`
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 40px;
-margin: 40px;
-max-width: 375px;
+padding: 30px;
+margin: 30px;
+
+${cardSize};
 }
 `;
 
@@ -38,14 +55,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin-top: 20px;
 `
 
-export const Subtitle = styled.h4`
-color: gray;    
-font-weight: bold;
-margin: 40px;
-text-align: center;
+export const Subtitle = styled.span`
+font-size: small;
 `;
 
 export const InputContainer = styled(FormControl)`
@@ -60,15 +73,52 @@ export const Input = styled(OutlinedInput)`
 }
 `;
 
+export const CustomInputLabel = styled(InputLabel)`
+&& { 
+    font-size: 12px;
+}
+`
+
 export const CustomButton = styled(Button)`
 && {
     background-color: ${primaryColor};
     color: white;
     width: 100%;
+    text-transform: none;
 
     &:hover {
         background-color: ${primaryColor};
         color: white;
     }
 }
-`
+`;
+
+export const ForgotPasswordAnchor = styled.a`
+font-size: x-small;
+color: #00376b;
+
+${anchorStyles};
+`;
+
+export const NoAccountContainer = styled(Paper)`
+padding: 20px;
+display: flex;
+justify-content: center;
+
+${cardSize};
+`;
+
+export const NoAccountButton = styled.a`
+color: ${primaryColor};
+font-size: small;
+font-weight: bold;
+margin: 0 0.5rem;
+
+${anchorStyles};
+`;
+
+
+export const LoginButtonContainer = styled.div`
+width: 100%;
+padding: 10px;
+`;

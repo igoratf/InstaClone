@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Button from "@material-ui/core/Button";
-import InputLabel from "@material-ui/core/InputLabel";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import FacebookIcon from "@material-ui/icons/Facebook";
+import Paper from '@material-ui/core/Paper';
 
 import {
   Container,
@@ -11,47 +11,50 @@ import {
   FormContainer,
   InputContainer,
   Title,
-  Subtitle,
   Input,
-  CustomButton
+  CustomButton,
+  CustomInputLabel,
+  NoAccountContainer,
+  Subtitle,
+  NoAccountButton,
+  ForgotPasswordAnchor,
+  LoginButtonContainer
 } from "./login.styles";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword ] = useState('');
+
   return (
     <Container>
-      <div style={{ marginBottom: "50px" }}></div>
       <LoginContainer variant="outlined">
         <Title></Title>
-        <Subtitle>Sign up to see photos and videos from your friends.</Subtitle>
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<FacebookIcon />}
-        >
-          Login with Facebook
-        </Button>
         <FormContainer>
-          <div>
             <InputContainer variant="outlined" fullWidth>
-              <InputLabel htmlFor="component-outlined">Email</InputLabel>
+              <CustomInputLabel htmlFor="component-outlined">Email</CustomInputLabel>
               <Input id="component-outlined" label="Name" />
             </InputContainer>
 
             <InputContainer variant="outlined" fullWidth>
-              <InputLabel htmlFor="component-outlined">Password</InputLabel>
+              <CustomInputLabel htmlFor="component-outlined">Password</CustomInputLabel>
               <Input type="password" id="component-outlined" label="Password" />
             </InputContainer>
 
-            <div style={{padding: '8px', width: '100%'}}>
+            <LoginButtonContainer>
               <CustomButton variant="contained">
-                Login
+                Log In
               </CustomButton>
-            </div>
-          </div>
+            </LoginButtonContainer>
 
+              <ForgotPasswordAnchor>Forgot password?</ForgotPasswordAnchor>
           
         </FormContainer>
       </LoginContainer>
+
+      <NoAccountContainer variant="outlined">
+          <Subtitle>Don't have an account?</Subtitle>
+          <NoAccountButton>Sign Up</NoAccountButton>
+      </NoAccountContainer>
     </Container>
   );
 };
