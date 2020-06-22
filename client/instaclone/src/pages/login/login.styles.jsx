@@ -18,7 +18,7 @@ cursor: pointer;
 `;
 
 const cardSize = css`
-width: 40vw;
+width: 350px;
 `
 
 export const Container = styled.div`
@@ -53,38 +53,22 @@ background-size: cover;
 export const FormContainer = styled.form`
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
+min-height: 200px;
 `
 
 export const Subtitle = styled.span`
 font-size: small;
 `;
 
-export const InputContainer = styled(FormControl)`
-&& {
-    padding: 8px;
-}
-`;
-
-export const Input = styled(OutlinedInput)`
-&& {     
-    background: #fafafa;
-}
-`;
-
-export const CustomInputLabel = styled(InputLabel)`
-&& { 
-    font-size: 12px;
-}
-`
-
 export const CustomButton = styled(Button)`
 && {
-    background-color: ${primaryColor};
-    color: white;
+    background-color: ${primaryColor}!important;
+    color: white!important;
     width: 100%;
     text-transform: none;
+    opacity: ${props => props.disabled ? 0.3 : 1};
 
     &:hover {
         background-color: ${primaryColor};
@@ -118,7 +102,8 @@ ${anchorStyles};
 `;
 
 
-export const LoginButtonContainer = styled.div`
+export const InputContainer = styled.div`
 width: 100%;
 padding: 10px;
+max-width: 250px;
 `;
