@@ -9,7 +9,9 @@ align-items: center;
 border-bottom: 1px solid lightgray;
 `;
 
-export const LogoImage = styled.img``
+export const LogoImage = styled.img`
+max-width: 150px;
+max-height: 40px;`
 
 export const OptionsContainer = styled.div`
 display: flex;

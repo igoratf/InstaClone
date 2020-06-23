@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo-inst.png";
 
 import HomeIcon from "@material-ui/icons/Home";
 import {
@@ -13,6 +13,8 @@ import {
   LogoImage,
 } from "./header.styles";
 
+import SearchBox from '../search-box/search-box.component';
+
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 import { faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
@@ -21,7 +23,7 @@ const Header = () => {
   return (
     <Container>
       <LogoImage src={Logo} />
-      <input type="text" placeholder="Search" />
+      <SearchBox />
       <OptionsContainer>
         <IconContainer>
           <IconWrapper>

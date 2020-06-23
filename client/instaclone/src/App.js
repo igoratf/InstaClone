@@ -8,10 +8,10 @@ import SignUpPage from './pages/sign-up/sign-up.component';
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
-      {/* <FeedPage /> */}
+      <Header />
+      <FeedPage />
       {/* <LoginPage /> */}
-      <SignUpPage />
+      {/* <SignUpPage /> */}
     </div>
   );
 }
