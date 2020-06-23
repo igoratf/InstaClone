@@ -1,22 +1,14 @@
-import styled, { css } from 'styled-components';
-import Logo from '../../assets/logo-inst.png';
+import styled from "styled-components";
+import Logo from "../../assets/logo-inst.png";
 
 import Button from "@material-ui/core/Button";
-import Paper from '@material-ui/core/Paper';
+import Paper from "@material-ui/core/Paper";
+import TextField from "@material-ui/core/TextField";
 
-const primaryColor = "#1095f6";
+import { theme, anchorStyles, formCardSize } from '../../styles.config';
 
-const anchorStyles = css`
-cursor: pointer;
+const { primaryColor } = theme;
 
-&:hover {
-    text-decoration: underline;
-}
-`;
-
-const cardSize = css`
-width: 350px;
-`
 
 export const Container = styled.div`
 display: flex;
@@ -25,17 +17,19 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 100%;
+overflow: scroll;
+padding: 2rem;
 `;
 
 export const LoginContainer = styled(Paper)`
 && {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 30px;
-margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 30px;
 
-${cardSize};
+    ${formCardSize};
 }
 `;
 
@@ -48,12 +42,17 @@ background-size: cover;
 `;
 
 export const FormContainer = styled.form`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-min-height: 200px;
-`
+width: 100%;
+display: grid;
+grid-template-rows: repeat(2, 1fr);
+grid-template-columns: 1fr;
+
+&& {
+    & > * {
+    padding: 8px;
+    }
+}
+`;
 
 export const Subtitle = styled.span`
 font-size: small;
@@ -62,16 +61,21 @@ font-size: small;
 export const CustomButton = styled(Button)`
 && {
     background-color: ${primaryColor}!important;
-    color: white!important;
+    color: white !important;
     width: 100%;
     text-transform: none;
-    opacity: ${props => props.disabled ? 0.3 : 1};
+    opacity: ${(props) => (props.disabled ? 0.3 : 1)};
 
     &:hover {
-        background-color: ${primaryColor};
-        color: white;
+    background-color: ${primaryColor};
+    color: white;
     }
 }
+`;
+
+export const ButtonContainer = styled.div`
+margin-top: 10px;
+padding-top: 10px;
 `;
 
 export const ForgotPasswordAnchor = styled.a`
@@ -81,26 +85,19 @@ color: #00376b;
 ${anchorStyles};
 `;
 
-export const NoAccountContainer = styled(Paper)`
+export const SecondaryCard = styled(Paper)`
+${formCardSize};
+
 padding: 20px;
-display: flex;
-justify-content: center;
-
-${cardSize};
 `;
 
-export const NoAccountButton = styled.a`
-color: ${primaryColor};
-font-size: small;
-font-weight: bold;
-margin: 0 0.5rem;
+export const InputField = styled(TextField)`
+&& {
 
-${anchorStyles};
+    & > div > input {
+        background-color: #fafafa;
+    }
+}
 `;
 
 
-export const InputContainer = styled.div`
-width: 100%;
-padding: 10px;
-max-width: 250px;
-`;

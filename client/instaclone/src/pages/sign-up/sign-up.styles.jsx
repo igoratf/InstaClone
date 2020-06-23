@@ -4,20 +4,10 @@ import TextField from "@material-ui/core/TextField";
 
 import Logo from '../../assets/logo-inst.png';
 
-const primaryColor = "#1095f6";
-const secondaryColor = "#8e8e8e";
+import { theme, anchorStyles, formCardSize } from '../../styles.config';
 
-const cardSize = css`
-width: 350px;
-`;
+const { primaryColor, secondaryColor } = theme;
 
-const anchorStyles = css`
-cursor: pointer;
-
-&:hover {
-    text-decoration: underline;
-}
-`;
 
 export const Container = styled.div`
 display: flex;
@@ -38,7 +28,7 @@ align-items: center;
 padding: 30px;
 margin: 30px;
 
-${cardSize};
+${formCardSize};
 }
 `;
 
@@ -54,6 +44,7 @@ export const Subtitle = styled.h3`
 color: ${secondaryColor};
 font-weight: bold;
 margin: 20px;
+font-size: 17px;
 `;
 
 export const FormContainer = styled.div`
@@ -64,7 +55,7 @@ grid-template-columns: 1fr;
 
 && {
     & > * {
-        padding: 5px;
+        padding: 8px;
     }
 
 }
@@ -95,7 +86,7 @@ color: gray;
 `;
 
 export const SecondaryCard = styled(Paper)`
-${cardSize};
+${formCardSize};
 
 padding: 20px;
 `;
