@@ -14,7 +14,15 @@ import {
   AnchorButton,
 } from "./sign-up.styles";
 
+const useStyles = () => ({
+    textField: {
+        fontSize: 12
+    }
+})
+
 const SignUp = () => {
+  const styles = useStyles();
+
   return (
     <Container>
       <SignUpContainer variant="outlined">
@@ -30,6 +38,8 @@ const SignUp = () => {
             name="email"
             type="email"
             required
+            InputLabelProps={{style: styles.textField}}
+            inputProps={{style: styles.textField}}
           />
           <InputField
             id="outlined-basic"
@@ -39,6 +49,8 @@ const SignUp = () => {
             name="name"
             type="text"
             required
+            InputLabelProps={{style: styles.textField}}
+            inputProps={{style: styles.textField}}
           />
           <InputField
             id="outlined-basic"
@@ -48,6 +60,8 @@ const SignUp = () => {
             name="username"
             type="text"
             required
+            InputLabelProps={{style: styles.textField}}
+            inputProps={{style: styles.textField}}
           />
           <InputField
             id="outlined-basic"
@@ -57,10 +71,12 @@ const SignUp = () => {
             name="password"
             type="password"
             required
+            InputLabelProps={{style: styles.textField}}
+            inputProps={{style: styles.textField}}
           />
 
           <ButtonContainer>
-            <CustomButton>Sign Up</CustomButton>
+            <CustomButton disabled>Sign Up</CustomButton>
           </ButtonContainer>
         </FormContainer>
 
