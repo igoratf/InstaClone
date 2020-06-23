@@ -47,7 +47,7 @@ margin: 20px;
 font-size: 17px;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
 width: 100%;
 display: grid;
 grid-template-rows: repeat(4, 1fr);
