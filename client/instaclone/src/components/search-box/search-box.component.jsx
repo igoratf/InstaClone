@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 
 import { Container, SearchInput, CancelButton } from "./search-box.styles";
+import { theme } from '../../styles.config';
+
+const { searchBarIconSize } = theme;
 
 const SearchBox = () => {
   const [searchText, setSearchText] = useState("");
@@ -10,13 +13,11 @@ const SearchBox = () => {
   const handleInputChange = (event) => {
     const { value } = event.target;
     setSearchText(value);
-
-    console.log(value);
   };
 
   return (
     <Container>
-      <SearchIcon style={{ fontSize: 14 }} />
+      <SearchIcon style={searchBarIconSize} />
       <SearchInput
         placeholder="Search"
         value={searchText}
@@ -26,7 +27,7 @@ const SearchBox = () => {
         isFocused={isFocused}
         style={{ fontSize: 13 }}
       />
-      <CancelButton isFocused={isFocused} />
+      <CancelButton isFocused={isFocused} style={searchBarIconSize} />
     </Container>
   );
 };

@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import CancelIcon from "@material-ui/icons/Cancel";
 
-const gray = "rgb(142, 142, 142)";
+import { theme } from '../../styles.config';
+
+const { lightGray } = theme;
 
 export const Container = styled.div`
   display: flex;
@@ -13,7 +15,7 @@ export const Container = styled.div`
   min-width: 125px;
   border: 1px solid #dbdbdb;
   background-color: #fafafa;
-  color: ${gray};
+  color: ${lightGray};
 `;
 
 export const SearchInput = styled.input`
@@ -27,14 +29,15 @@ export const SearchInput = styled.input`
 
   && {
     &::placeholder {
-      color: ${gray};
+      color: ${lightGray};
     }
   }
 `;
 
 export const CancelButton = styled(CancelIcon)`
   && {
-    font-size: 14px;
+    color: ${lightGray};
+    cursor: pointer;
     position: "absoute";
     right: 0;
     visibility: ${(props) => (props.isFocused ? "visible" : "hidden")};
