@@ -1,23 +1,21 @@
 import React, { useState } from "react";
 
-import Button from "@material-ui/core/Button";
-import OutlinedInput from "@material-ui/core/OutlinedInput";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import Paper from "@material-ui/core/Paper";
-import TextField from "@material-ui/core/TextField";
+import CustomButton from "../../components/custom-button/custom-button.component";
+import AnchorButton from "../../components/anchor-button/anchor-button.component";
 
 import {
   Container,
   LoginContainer,
   FormContainer,
   Title,
-  CustomButton,
-  NoAccountContainer,
-  Subtitle,
-  NoAccountButton,
+  SecondaryCard,
+  ButtonContainer,
   ForgotPasswordAnchor,
-  InputContainer,
+  InputField
 } from "./login.styles";
+
+import { theme } from '../../styles.config';
+const { textField } = theme;
 
 const LoginPage = () => {
   const [userCredentials, setUserCredentials] = useState({email: '', password: ''});
@@ -61,9 +59,9 @@ const LoginPage = () => {
     <Container>
       <LoginContainer variant="outlined">
         <Title></Title>
+
         <FormContainer onSubmit={handleSubmit}>
-          <InputContainer>
-            <TextField
+            <InputField
               error={!!emailError}
               helperText={emailError}
               id="outlined-basic"
@@ -75,10 +73,10 @@ const LoginPage = () => {
               type="email"
               onChange={(e) => handleInputChange(e)}
               required
+              InputLabelProps={{style: textField}}
+              inputProps={{style: textField}}
             />
-          </InputContainer>
-          <InputContainer>
-            <TextField
+            <InputField
               error={!!passwordError}
               helperText={passwordError}
               id="outlined-basic"
@@ -90,21 +88,21 @@ const LoginPage = () => {
               name="password"
               onChange={(e) => handleInputChange(e)}
               required
+              InputLabelProps={{style: textField}}
+              inputProps={{style: textField}}
             />
-          </InputContainer>
-
-          <InputContainer>
-            <CustomButton variant="contained" disabled={!email || !password} type="submit">Log In</CustomButton>
-          </InputContainer>
+            
+            <ButtonContainer>
+              <CustomButton disabled={!email || !password} type="submit">Log In</CustomButton>
+            </ButtonContainer>
 
           <ForgotPasswordAnchor>Forgot password?</ForgotPasswordAnchor>
         </FormContainer>
       </LoginContainer>
 
-      <NoAccountContainer variant="outlined">
-        <Subtitle>Don't have an account?</Subtitle>
-        <NoAccountButton>Sign Up</NoAccountButton>
-      </NoAccountContainer>
+      <SecondaryCard variant="outlined">
+        Don't have an account? <AnchorButton>Sign Up</AnchorButton>
+      </SecondaryCard>
     </Container>
   );
 };

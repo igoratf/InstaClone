@@ -14,14 +14,10 @@ import {
   AnchorButton,
 } from "./sign-up.styles";
 
-const useStyles = () => ({
-    textField: {
-        fontSize: 12
-    }
-})
+import { theme } from '../../styles.config';
+const { textField } = theme;
 
-const SignUp = () => {
-  const styles = useStyles();
+const SignUp = () => {  
 
   return (
     <Container>
@@ -38,8 +34,8 @@ const SignUp = () => {
             name="email"
             type="email"
             required
-            InputLabelProps={{style: styles.textField}}
-            inputProps={{style: styles.textField}}
+            InputLabelProps={{style: textField}}
+            inputProps={{style: textField}}
           />
           <InputField
             id="outlined-basic"
@@ -49,8 +45,8 @@ const SignUp = () => {
             name="name"
             type="text"
             required
-            InputLabelProps={{style: styles.textField}}
-            inputProps={{style: styles.textField}}
+            InputLabelProps={{style: textField}}
+            inputProps={{style: textField}}
           />
           <InputField
             id="outlined-basic"
@@ -60,8 +56,8 @@ const SignUp = () => {
             name="username"
             type="text"
             required
-            InputLabelProps={{style: styles.textField}}
-            inputProps={{style: styles.textField}}
+            InputLabelProps={{style: textField}}
+            inputProps={{style: textField}}
           />
           <InputField
             id="outlined-basic"
@@ -71,8 +67,8 @@ const SignUp = () => {
             name="password"
             type="password"
             required
-            InputLabelProps={{style: styles.textField}}
-            inputProps={{style: styles.textField}}
+            InputLabelProps={{style: textField}}
+            inputProps={{style: textField}}
           />
 
           <ButtonContainer>
