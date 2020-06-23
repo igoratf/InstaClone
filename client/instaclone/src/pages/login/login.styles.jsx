@@ -1,11 +1,8 @@
 import styled, { css } from 'styled-components';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/logo-inst.png';
 
 import Button from "@material-ui/core/Button";
-import InputLabel from "@material-ui/core/InputLabel";
-import FormControl from "@material-ui/core/FormControl";
 import Paper from '@material-ui/core/Paper';
-import { OutlinedInput } from '@material-ui/core';
 
 const primaryColor = "#1095f6";
 
@@ -42,10 +39,10 @@ ${cardSize};
 }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.div`
 background-image: url(${Logo});
 width: 175px;
-height: 50px;
+height: 60px;
 background-repeat: no-repeat;
 background-size: cover;
 `;

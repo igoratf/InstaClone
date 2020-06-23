@@ -31,17 +31,13 @@ const LoginPage = () => {
 
     setUserCredentials({...userCredentials, [name]: value});
     setErrorMessages({emailError: '', passwordError:''});
-
-    console.log(userCredentials);
+    
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     validateForm();
-
-    console.log('event ', event);
-    console.log(userCredentials);
 
   }
 
