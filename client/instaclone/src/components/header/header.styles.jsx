@@ -20,10 +20,10 @@ align-items: center;
 `
 
 export const IconContainer = styled.div`
-padding: 0 5px;
+padding: 0 0.2rem;
 font-size: 12px;
 height: 54px;
-width: 30px;
+width: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -41,7 +41,7 @@ cursor: pointer;
 
 export const AvatarPic = styled(Avatar)`
 && {
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
 }
 `
