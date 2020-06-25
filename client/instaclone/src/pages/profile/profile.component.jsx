@@ -1,6 +1,11 @@
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
 import SettingsIcon from "@material-ui/icons/Settings";
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import PhoneIcon from '@material-ui/icons/Phone';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import PersonPinIcon from '@material-ui/icons/PersonPin';
 
 import {
   Container,
@@ -8,12 +13,20 @@ import {
   UserInfo,
   InfoContainer,
   OptionsContainer,
-  PersonalInfoContainer
+  PersonalInfoContainer,
+  ProfileFeed,
+  ProfileTabs,
 } from "./profile.styles";
 
-import StoryContainer from '../../components/story-container/story-container.component';
+import StoryContainer from "../../components/story-container/story-container.component";
 
 const Profile = () => {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <Container>
       <Header>
@@ -33,9 +46,15 @@ const Profile = () => {
           </OptionsContainer>
 
           <InfoContainer>
-            <span><strong>171 </strong>Posts</span>
-            <span><strong>777 </strong>Followers</span>
-            <span><strong>902 </strong>Following</span>
+            <span>
+              <strong>171 </strong>Posts
+            </span>
+            <span>
+              <strong>777 </strong>Followers
+            </span>
+            <span>
+              <strong>902 </strong>Following
+            </span>
           </InfoContainer>
 
           <InfoContainer>
@@ -46,7 +65,25 @@ const Profile = () => {
           </InfoContainer>
         </UserInfo>
       </Header>
-      <StoryContainer profile={true}/>
+      <StoryContainer profile={true} />
+
+      <ProfileFeed>
+        <ProfileTabs>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            indicatorColor="primary"
+            textColor="primary"
+            aria-label="icon tabs example"
+            TabIndicatorProps={{style: {top: 0, backgroundColor: 'gray '}}}
+          >
+            <Tab icon={<PhoneIcon />} aria-label="phone" />
+            <Tab icon={<FavoriteIcon />} aria-label="favorite" />
+            <Tab icon={<PersonPinIcon />} aria-label="person" />
+          </Tabs>
+        </ProfileTabs>
+      </ProfileFeed>
     </Container>
   );
 };

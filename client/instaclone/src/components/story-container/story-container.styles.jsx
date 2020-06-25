@@ -8,8 +8,11 @@ align-items: center;
 background: ${props => props.profile === "profile" ? 'inherit' : '#fff'};
 border: ${props => props.profile === "profile" ? 'none' : '1px solid lightgray'};
 height: 100px;
+min-height: 100px;
 width: 600px;
 overflow-x: hidden;
+overflow-y: hidden;
+padding: 20px;
 `;
 
 export const ButtonContainer = styled.div`

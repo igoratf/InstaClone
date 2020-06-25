@@ -63,3 +63,20 @@ grid-template-rows: repeat(2, 1fr);
 grid-gap: 5px;
 justify-items: start;
 `;
+
+export const ProfileFeed = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+max-width: 60vw;
+`
+
+export const ProfileTabs = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+margin-top: 30px;
+border-top: 1px solid lightgray;
+`
