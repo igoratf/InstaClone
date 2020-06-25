@@ -19,17 +19,20 @@ const styles = {
       color: 'gray'
   },
   labelIcon: {
-    minHeight: 50
+    minHeight: 50,
+    paddingTop: 0
   },
   wrapper: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: '12px',
+    fontSize: '12px'
     
   },
   icon: {
-    width: 15, margin: 0, paddingRight: 5
+    width: 15, 
+    margin: 0, 
+    paddingRight: 5
   },
   selected: {
     color: 'black'
@@ -39,7 +42,7 @@ const styles = {
     top: 0, 
     backgroundColor: '#262626 ', 
     '& > span': {
-      maxWidth: 40
+      maxWidth: 60
     }
   }
 };
@@ -51,7 +54,7 @@ const CustomTabs = ({classes}) => {
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
-    
+
     return (
         <Container>
             <Tabs
