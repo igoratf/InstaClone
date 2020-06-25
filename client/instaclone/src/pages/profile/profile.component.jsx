@@ -11,6 +11,8 @@ import {
   PersonalInfoContainer
 } from "./profile.styles";
 
+import StoryContainer from '../../components/story-container/story-container.component';
+
 const Profile = () => {
   return (
     <Container>
@@ -44,6 +46,7 @@ const Profile = () => {
           </InfoContainer>
         </UserInfo>
       </Header>
+      <StoryContainer profile={true}/>
     </Container>
   );
 };

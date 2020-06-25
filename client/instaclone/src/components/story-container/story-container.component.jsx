@@ -5,9 +5,10 @@ import Fab from "@material-ui/core/Fab";
 import StoryIcon from "../story-icon/story-icon.component";
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-export default function StoryContainer() {
+
+const StoryContainer = ({profile}) => {
   return (
-    <Container>
+    <Container profile={profile ? 'profile' : 'menu'}>
       <StoryIcon />
       <StoryIcon />
       <StoryIcon />
@@ -22,4 +23,7 @@ export default function StoryContainer() {
       </ButtonContainer>
     </Container>
   );
-}
+};
+
+
+export default StoryContainer;

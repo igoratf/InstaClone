@@ -3,9 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Avatar from '@material-ui/core/Avatar';
 
 export const Container = styled.div`
-display: flex;
-justify-content: space-evenly;
+// display: flex;
+// justify-content: space-evenly;
+// align-items: center;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
 align-items: center;
+justify-items: center;
 border-bottom: 1px solid lightgray;
 `;
 

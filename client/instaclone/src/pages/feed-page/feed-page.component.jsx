@@ -6,7 +6,7 @@ import PostCard from '../../components/post-card/post-card.component';
 export default function FeedPage() {
     return (
         <Container>
-            <StoryContainer />
+            <StoryContainer profile={false}/>
             <PostContainer>
                 <PostCard />
                 <PostCard />

@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import StoryContainer from '../../components/story-container/story-container.component';
 
 
 export const Container = styled.div`
 display: flex;
-justify-content: space-around;
+background-color: #fafafa;
+flex-direction: column;
+align-items: center;
 padding: 20px;
 height: 100%;
 width: 100%;
@@ -16,6 +19,7 @@ display: grid;
 grid-template-rows: 1fr;
 grid-template-columns: 1fr 2fr;
 grid-gap: 5vw;
+margin-bottom: 30px;
 
 `;
 
@@ -58,4 +62,4 @@ display: grid;
 grid-template-rows: repeat(2, 1fr);
 grid-gap: 5px;
 justify-items: start;
-`
+`;
