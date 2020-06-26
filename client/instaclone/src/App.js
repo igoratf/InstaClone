@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      /<ProfilePage />
+      <ProfilePage />
       {/* <FeedPage /> */}
       {/* <LoginPage /> */}
       {/* <SignUpPage /> */}

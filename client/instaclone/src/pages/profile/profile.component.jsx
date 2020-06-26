@@ -9,7 +9,10 @@ import {
   InfoContainer,
   OptionsContainer,
   PersonalInfoContainer,
-  ProfileFeed
+  ProfileFeed,
+  MediaMosaic,
+  Media,
+  MediaContainer,
 } from "./profile.styles";
 
 import StoryContainer from "../../components/story-container/story-container.component";
@@ -59,6 +62,44 @@ const Profile = () => {
       <ProfileFeed>
         <CustomTabs />
       </ProfileFeed>
+
+      <MediaMosaic>
+        <MediaContainer>
+          <Media
+            src={
+              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
+            }
+          />
+        </MediaContainer>
+        <MediaContainer>
+          <Media
+            src={
+              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
+            }
+          />
+        </MediaContainer>
+        <MediaContainer>
+          <Media
+            src={
+              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
+            }
+          />
+        </MediaContainer>
+        <MediaContainer>
+          <Media
+            src={
+              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
+            }
+          />
+        </MediaContainer>
+        <MediaContainer>
+          <Media
+            src={
+              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
+            }
+          />
+        </MediaContainer>
+      </MediaMosaic>
     </Container>
   );
 };

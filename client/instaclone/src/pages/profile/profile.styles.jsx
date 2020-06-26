@@ -8,7 +8,6 @@ background-color: #fafafa;
 flex-direction: column;
 align-items: center;
 padding: 20px;
-height: 100%;
 width: 100%;
 `;
 
@@ -80,3 +79,23 @@ width: 100%;
 margin-top: 30px;
 border-top: 1px solid lightgray;
 `;
+
+export const MediaMosaic = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 1.5rem;
+align-items: center;
+justify-items: center;
+max-width: 60vw;
+// padding: 20px;
+padding-bottom: 5vh;
+`;
+
+export const MediaContainer = styled.div`
+width: 100%;
+`
+export const Media = styled.img`
+max-height: 250px;
+max-width: 250px;
+`
+
