@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import StoryContainer from '../../components/story-container/story-container.component';
-
 
 export const Container = styled.div`
 display: flex;
@@ -9,6 +7,9 @@ flex-direction: column;
 align-items: center;
 padding: 20px;
 width: 100%;
+@media screen and (max-width: 600px) {
+    padding: 0;
+}
 `;
 
 export const Header = styled.div`
@@ -86,15 +87,59 @@ align-items: center;
 justify-items: center;
 max-width: 60vw;
 padding-bottom: 5vh;
+
+@media screen and (max-width: 600px) {
+    width: 100%;
+    max-width: unset;
+}
 `;
 
 export const MediaContainer = styled.div`
+position: relative;
 width: 100%;
+
+&:hover > div{
+    display: block;
+}
 `
 export const Media = styled.img`
 width: 100%;
 height: 100%;
 max-height: 275px;
 max-width: 275px;
-`
+min-height: 125px;
+min-width: 125px;
+`;
 
+export const Overlay = styled.div`
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(0,0,0,0.3);
+display: none;
+`;
+
+export const OverlayInfoContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+`;
+
+export const OverlayInfo = styled.span`
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-weight: bold;
+`;
+
+export const OverlayText = styled.span`
+padding: 0 0.5rem;
+`;
