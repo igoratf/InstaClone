@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import StoryContainer from '../../components/story-container/story-container.component';
-
 
 export const Container = styled.div`
 display: flex;
@@ -131,7 +129,6 @@ justify-content: center;
 align-items: center;
 width: 100%;
 height: 100%;
-padding-left: 2rem;
 `;
 
 export const OverlayInfo = styled.span`
@@ -141,7 +138,6 @@ justify-content: center;
 align-items: center;
 text-align: center;
 font-weight: bold;
-padding: 0 1rem;
 `;
 
 export const OverlayText = styled.span`

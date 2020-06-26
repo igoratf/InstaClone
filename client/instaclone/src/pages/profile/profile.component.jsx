@@ -154,7 +154,7 @@ const Profile = () => {
           />
           <Overlay>
             <OverlayInfoContainer>
-              <OverlayInfo>
+              <OverlayInfo style={{marginRight: '1rem'}}>
                 <FavoriteIcon />
                 <OverlayText>275</OverlayText>
               </OverlayInfo>

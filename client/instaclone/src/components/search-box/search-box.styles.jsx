@@ -39,8 +39,8 @@ export const CancelButton = styled(CancelIcon)`
   && {
     color: ${lightGray};
     cursor: pointer;
-    position: "absoute";
     right: 0;
+    padding: 0.2rem;
     visibility: ${(props) => (props.isFocused ? "visible" : "hidden")};
   }
 `;
