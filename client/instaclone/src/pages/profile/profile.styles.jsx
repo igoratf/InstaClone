@@ -97,7 +97,12 @@ padding-bottom: 5vh;
 `;
 
 export const MediaContainer = styled.div`
+position: relative;
 width: 100%;
+
+&:hover > div{
+    display: block;
+}
 `
 export const Media = styled.img`
 width: 100%;
@@ -106,5 +111,39 @@ max-height: 275px;
 max-width: 275px;
 min-height: 125px;
 min-width: 125px;
-`
+`;
 
+export const Overlay = styled.div`
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(0,0,0,0.3);
+display: none;
+`;
+
+export const OverlayInfoContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+padding-left: 2rem;
+`;
+
+export const OverlayInfo = styled.span`
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-weight: bold;
+padding: 0 1rem;
+`;
+
+export const OverlayText = styled.span`
+padding: 0 0.5rem;
+`;

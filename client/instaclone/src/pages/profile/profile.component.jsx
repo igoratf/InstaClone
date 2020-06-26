@@ -1,6 +1,8 @@
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
 import SettingsIcon from "@material-ui/icons/Settings";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ModeCommentIcon from '@material-ui/icons/ModeComment';
 
 import {
   Container,
@@ -13,6 +15,10 @@ import {
   MediaMosaic,
   Media,
   MediaContainer,
+  Overlay,
+  OverlayInfoContainer,
+  OverlayInfo,
+  OverlayText
 } from "./profile.styles";
 
 import StoryContainer from "../../components/story-container/story-container.component";
@@ -70,6 +76,18 @@ const Profile = () => {
               "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
             }
           />
+          <Overlay>
+            <OverlayInfoContainer>
+              <OverlayInfo>
+                <FavoriteIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+              <OverlayInfo>
+                <ModeCommentIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+            </OverlayInfoContainer>
+          </Overlay>
         </MediaContainer>
         <MediaContainer>
           <Media
@@ -77,6 +95,18 @@ const Profile = () => {
               "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
             }
           />
+          <Overlay>
+            <OverlayInfoContainer>
+              <OverlayInfo>
+                <FavoriteIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+              <OverlayInfo>
+                <ModeCommentIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+            </OverlayInfoContainer>
+          </Overlay>
         </MediaContainer>
         <MediaContainer>
           <Media
@@ -84,6 +114,18 @@ const Profile = () => {
               "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
             }
           />
+          <Overlay>
+            <OverlayInfoContainer>
+              <OverlayInfo>
+                <FavoriteIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+              <OverlayInfo>
+                <ModeCommentIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+            </OverlayInfoContainer>
+          </Overlay>
         </MediaContainer>
         <MediaContainer>
           <Media
@@ -91,6 +133,18 @@ const Profile = () => {
               "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
             }
           />
+          <Overlay>
+            <OverlayInfoContainer>
+              <OverlayInfo>
+                <FavoriteIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+              <OverlayInfo>
+                <ModeCommentIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+            </OverlayInfoContainer>
+          </Overlay>
         </MediaContainer>
         <MediaContainer>
           <Media
@@ -98,6 +152,18 @@ const Profile = () => {
               "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
             }
           />
+          <Overlay>
+            <OverlayInfoContainer>
+              <OverlayInfo>
+                <FavoriteIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+              <OverlayInfo>
+                <ModeCommentIcon />
+                <OverlayText>275</OverlayText>
+              </OverlayInfo>
+            </OverlayInfoContainer>
+          </Overlay>
         </MediaContainer>
       </MediaMosaic>
     </Container>
