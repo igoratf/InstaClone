@@ -30,7 +30,7 @@ const Header = () => {
       <OptionsContainer>
         <IconContainer>
           <IconWrapper>
-            <HomeIcon />
+            <HomeIcon style={{fontSize: "28px"}}/>
           </IconWrapper>
         </IconContainer>
         <IconContainer>
@@ -40,12 +40,12 @@ const Header = () => {
         </IconContainer>
         <IconContainer>
           <IconWrapper>
-          <Icon icon={faCompass} style={{ fontSize: "20px" }} />
+          <Icon icon={faCompass} style={{ fontSize: "22px" }} />
           </IconWrapper>
         </IconContainer>
         <IconContainer style={{ paddingLeft: "8px", paddingRight: "16px" }}>
           <IconWrapper>
-            <FavoriteBorderIcon />
+            <FavoriteBorderIcon style={{fontSize: "26px"}}/>
           </IconWrapper>
         </IconContainer>
         <AvatarPic

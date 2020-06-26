@@ -9,6 +9,9 @@ flex-direction: column;
 align-items: center;
 padding: 20px;
 width: 100%;
+@media screen and (max-width: 600px) {
+    padding: 0;
+}
 `;
 
 export const Header = styled.div`
@@ -86,6 +89,11 @@ align-items: center;
 justify-items: center;
 max-width: 60vw;
 padding-bottom: 5vh;
+
+@media screen and (max-width: 600px) {
+    width: 100%;
+    max-width: unset;
+}
 `;
 
 export const MediaContainer = styled.div`
@@ -96,5 +104,7 @@ width: 100%;
 height: 100%;
 max-height: 275px;
 max-width: 275px;
+min-height: 125px;
+min-width: 125px;
 `
 
