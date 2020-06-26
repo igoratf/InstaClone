@@ -6,9 +6,9 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
+import GridOnIcon from '@material-ui/icons/GridOn';
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 
 
 const styles = {
@@ -63,8 +63,8 @@ const CustomTabs = ({classes}) => {
             aria-label="icon tabs example"
             TabIndicatorProps={{style: styles.indicator}}
           >
-            <Tab icon={<PhoneIcon style={styles.icon} />}  classes={{root: classes.tab, wrapper: classes.wrapper, selected: classes.selected, labelIcon: classes.labelIcon}} label="Posts" aria-label="phone" />
-            <Tab icon={<FavoriteIcon style={styles.icon}/>} classes={{root: classes.tab, wrapper: classes.wrapper, selected: classes.selected, labelIcon: classes.labelIcon}} label="Saved"aria-label="favorite" style={{maxHeight: 40}}/>
+            <Tab icon={<GridOnIcon style={styles.icon} />}  classes={{root: classes.tab, wrapper: classes.wrapper, selected: classes.selected, labelIcon: classes.labelIcon}} label="Posts" aria-label="phone" />
+            <Tab icon={<BookmarkBorderIcon style={styles.icon}/>} classes={{root: classes.tab, wrapper: classes.wrapper, selected: classes.selected, labelIcon: classes.labelIcon}} label="Saved"aria-label="favorite" style={{maxHeight: 40}}/>
           </Tabs>
         </Container>
     )
