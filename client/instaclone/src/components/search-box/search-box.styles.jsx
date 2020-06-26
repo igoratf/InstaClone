@@ -9,12 +9,13 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
-  width: 215px;
+  width: 100%;
+  max-width: 215px;
   height: 30px;
   min-width: 125px;
   border: 1px solid #dbdbdb;
   background-color: #fafafa;
+  padding-left: 1rem;
   color: ${lightGray};
 `;
 

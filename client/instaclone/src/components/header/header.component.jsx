@@ -11,6 +11,7 @@ import {
   Icon,
   AvatarPic,
   LogoImage,
+  LogoContainer,
 } from "./header.styles";
 
 import SearchBox from '../search-box/search-box.component';
@@ -22,7 +23,9 @@ import { faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
 const Header = () => {
   return (
     <Container>
-      <LogoImage src={Logo} />
+      <LogoContainer>
+        <LogoImage src={Logo} />
+      </LogoContainer>
       <SearchBox />
       <OptionsContainer>
         <IconContainer>
@@ -31,12 +34,16 @@ const Header = () => {
           </IconWrapper>
         </IconContainer>
         <IconContainer>
-          <Icon icon={faPaperPlane} style={{ fontSize: "18px" }} />
+          <IconWrapper>
+          <Icon icon={faPaperPlane} style={{ fontSize: "20px" }} />
+          </IconWrapper>
         </IconContainer>
         <IconContainer>
+          <IconWrapper>
           <Icon icon={faCompass} style={{ fontSize: "20px" }} />
+          </IconWrapper>
         </IconContainer>
-        <IconContainer style={{ paddingRight: "16px" }}>
+        <IconContainer style={{ paddingLeft: "8px", paddingRight: "16px" }}>
           <IconWrapper>
             <FavoriteBorderIcon />
           </IconWrapper>

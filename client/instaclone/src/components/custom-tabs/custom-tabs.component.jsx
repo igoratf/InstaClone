@@ -19,7 +19,7 @@ const styles = {
       color: 'gray'
   },
   labelIcon: {
-    minHeight: 50,
+    minHeight: 60,
     paddingTop: 0
   },
   wrapper: {
@@ -40,10 +40,8 @@ const styles = {
   indicator: {
     color: 'gray', 
     top: 0, 
-    backgroundColor: '#262626 ', 
-    '& > span': {
-      maxWidth: 60
-    }
+    backgroundColor: '#262626 ',
+    height: 1
   }
 };
 

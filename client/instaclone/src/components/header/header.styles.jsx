@@ -7,26 +7,30 @@ export const Container = styled.div`
 // justify-content: space-evenly;
 // align-items: center;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: 1fr 0.5fr 1fr;
 align-items: center;
 justify-items: center;
 border-bottom: 1px solid lightgray;
 `;
 
+export const LogoContainer = styled.div`
+padding: 0 1rem;
+`
+
 export const LogoImage = styled.img`
-max-width: 150px;
+max-width: 112px;
 max-height: 40px;`
 
 export const OptionsContainer = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
+padding: 1rem;
 `
 
 export const IconContainer = styled.div`
 padding: 0 0.2rem;
-font-size: 12px;
-height: 54px;
+// height: 54px;
 width: 40px;
 display: flex;
 justify-content: center;
@@ -45,7 +49,7 @@ cursor: pointer;
 
 export const AvatarPic = styled(Avatar)`
 && {
-    height: 22px;
-    width: 22px;
+    height: 25px;
+    width: 25px;
 }
 `

@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-margin-top: 25px;
+margin-top: 1rem;
 display: flex;
 justify-content: flex-start;
 align-items: center;
 background: ${props => props.profile === "profile" ? 'inherit' : '#fff'};
 border: ${props => props.profile === "profile" ? 'none' : '1px solid lightgray'};
-height: 100px;
+// height: 100px;
 min-height: 100px;
-width: 600px;
+// width: 600px;
+max-width: 600px;
 overflow-x: hidden;
 overflow-y: hidden;
 padding: 20px;
