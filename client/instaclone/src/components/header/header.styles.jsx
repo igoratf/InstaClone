@@ -12,7 +12,8 @@ border-bottom: 1px solid lightgray;
 padding: 0.2rem;
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled(Link)`
+cursor: pointer;
 padding: 0 1rem;
 `;
 
