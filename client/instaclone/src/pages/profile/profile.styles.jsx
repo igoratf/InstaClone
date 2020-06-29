@@ -21,7 +21,7 @@ width: 100%;
 `;
 
 export const Header = styled.div`
-padding: 5vh;
+padding: 5vh 3vw;
 display: grid;
 grid-template-rows: 1fr;
 grid-template-columns: 1fr 2fr;

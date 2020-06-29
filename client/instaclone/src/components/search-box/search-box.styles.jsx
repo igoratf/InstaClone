@@ -17,6 +17,10 @@ export const Container = styled.div`
   background-color: #fafafa;
   padding-left: 1rem;
   color: ${lightGray};
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const SearchInput = styled.input`

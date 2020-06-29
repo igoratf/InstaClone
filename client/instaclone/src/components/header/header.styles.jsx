@@ -10,6 +10,10 @@ align-items: center;
 justify-items: center;
 border-bottom: 1px solid lightgray;
 padding: 0.2rem;
+
+@media screen and (max-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+}
 `;
 
 export const LogoContainer = styled(Link)`
