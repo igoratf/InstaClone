@@ -28,6 +28,7 @@ export const SearchInput = styled.input`
   transition: width 0.15s;
 
   && {
+    font-size: 13px;
     &::placeholder {
       color: ${lightGray};
     }

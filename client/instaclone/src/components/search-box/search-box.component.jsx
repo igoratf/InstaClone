@@ -24,7 +24,7 @@ const SearchBox = () => {
         onChange={(e) => handleInputChange(e)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        style={{ fontSize: 13, width: isFocused ? '100%' : '50px'} }
+        style={{ width: isFocused ? '100%' : '50px'} }
       />
       <CancelButton  style={{...searchBarIconSize, visibility: isFocused ? 'visible' : 'hidden'}} />
     </Container>
