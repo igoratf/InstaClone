@@ -18,7 +18,10 @@ import {
   Overlay,
   OverlayInfoContainer,
   OverlayInfo,
-  OverlayText
+  OverlayText,
+  EditButton,
+  UserName,
+  NameTitle
 } from "./profile.styles";
 
 import StoryContainer from "../../components/story-container/story-container.component";
@@ -38,9 +41,9 @@ const Profile = () => {
         </Avatar>
         <UserInfo>
           <OptionsContainer>
-            <h2 style={{ textAlign: "left" }}>igoratf</h2>
-            <button>Edit profile</button>
-            <SettingsIcon style={{ paddingLeft: "1rem" }} />
+            <UserName>igoratf</UserName>
+            <EditButton>Edit Profile</EditButton>
+            <SettingsIcon style={{ paddingLeft: "1rem", cursor: "pointer" }} />
           </OptionsContainer>
 
           <InfoContainer>
@@ -57,7 +60,7 @@ const Profile = () => {
 
           <InfoContainer>
             <PersonalInfoContainer>
-              <strong>Igor Farias</strong>
+              <NameTitle>Igor Farias</NameTitle>
               <span>Bio</span>
             </PersonalInfoContainer>
           </InfoContainer>

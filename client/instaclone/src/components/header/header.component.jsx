@@ -26,7 +26,7 @@ import { faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
 const Header = () => {
   return (
     <Container>
-      <LogoContainer>
+      <LogoContainer to="/">
         <LogoImage src={Logo} />
       </LogoContainer>
       <SearchBox />

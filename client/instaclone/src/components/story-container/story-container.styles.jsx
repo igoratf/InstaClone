@@ -37,8 +37,8 @@ min-width: 100px;
 export const ArrowButton = styled.button`
 border-radius: 50%;
 cursor: pointer;
-width: 25px;
-height: 25px;
+width: 27px;
+height: 27px;
 border: none;
 background-color: rgba(240, 240, 240, 0.7);
 outline: none;
