@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
 import Header from './components/header/header.component';
 import FeedPage from './pages/feed-page/feed-page.component';
 import LoginPage from './pages/login/login.component';
@@ -10,10 +12,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ProfilePage />
-      {/* <FeedPage /> */}
-      {/* <LoginPage /> */}
-      {/* <SignUpPage /> */}
+      <Switch>
+        <Route exact path="/" component={FeedPage} />
+        <Route exact path="/signup" component={SignUpPage} />
+        <Route exact path="/signin" component={LoginPage} />
+        <Route path="/profile" component={ProfilePage} />
+      </Switch>      
     </div>
   );
 }

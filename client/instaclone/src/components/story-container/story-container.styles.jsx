@@ -31,4 +31,5 @@ width: 25px;
 height: 25px;
 border: none;
 background-color: rgba(240, 240, 240, 0.7);
+outline: none;
 `;

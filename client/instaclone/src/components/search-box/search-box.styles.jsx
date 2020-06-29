@@ -21,7 +21,6 @@ export const Container = styled.div`
 
 export const SearchInput = styled.input`
   background-color: transparent;
-  width: ${(props) => (props.isFocused ? "100%" : "50px")};
   padding: 8px;
   height: 10px;
   border: none;
@@ -41,6 +40,5 @@ export const CancelButton = styled(CancelIcon)`
     cursor: pointer;
     right: 0;
     padding: 0.2rem;
-    visibility: ${(props) => (props.isFocused ? "visible" : "hidden")};
   }
 `;

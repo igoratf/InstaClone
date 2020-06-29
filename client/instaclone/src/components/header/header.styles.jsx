@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Avatar from '@material-ui/core/Avatar';
 
@@ -13,7 +14,7 @@ padding: 0.2rem;
 
 export const LogoContainer = styled.div`
 padding: 0 1rem;
-`
+`;
 
 export const LogoImage = styled.img`
 max-width: 140px;
@@ -28,14 +29,23 @@ align-items: center;
 padding: 0.5rem;
 `
 
-export const IconContainer = styled.div`
+export const LinkContainer = styled(Link)`
 padding: 0 0.2rem;
 width: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
+color: black;
 }
-`
+`;
+
+export const NotificationsIcon = styled.div`
+padding: 0 0.2rem;
+width: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+`;
 
 export const IconWrapper = styled.div`
 cursor: pointer;
@@ -48,7 +58,8 @@ cursor: pointer;
 
 export const AvatarPic = styled(Avatar)`
 && {
+    cursor: pointer;
     height: 25px;
     width: 25px;
 }
-`
+`;
