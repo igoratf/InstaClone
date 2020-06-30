@@ -23,6 +23,8 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 import { faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
 
+import NotificationsDropdown from '../notifications-dropdown/notifications-dropdown.component';
+
 const Header = () => {
   return (
     <Container>
@@ -51,6 +53,7 @@ const Header = () => {
             <FavoriteBorderIcon style={{fontSize: "26px"}}/>
           </IconWrapper>
         </NotificationsIcon>
+
         
         <Link to="/profile">
           <AvatarPic
@@ -60,6 +63,8 @@ const Header = () => {
         </Link>
         
       </OptionsContainer>
+
+      <NotificationsDropdown />
     </Container>
   );
 };
