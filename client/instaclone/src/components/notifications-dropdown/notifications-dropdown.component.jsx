@@ -8,44 +8,47 @@ import Avatar from "@material-ui/core/Avatar";
 import ImageIcon from "@material-ui/icons/Image";
 import {
   Container,
-  Pointer
+  Pointer,
+  Wrapper
 } from "./notifications-dropdown.styles";
 import { Divider } from "@material-ui/core";
 
 const NotificationsDropdown = () => {
   return (
+    <Wrapper>
+      <Pointer />
     <Container>
       <List style={{ maxWidth: 400, zIndex: 10, position: 'relative' }}>
-        <Pointer />
         <ListItem button>
           <ListItemAvatar>
             <Avatar>
               <ImageIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Someone" />
         </ListItem>
-        <Divider />
+        <Divider variant="inset" component="li" />
         <ListItem button>
           <ListItemAvatar>
             <Avatar>
               <ImageIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Someone" />
         </ListItem>
-        <Divider />
+        <Divider variant="inset" component="li" />
         <ListItem button>
           <ListItemAvatar>
             <Avatar>
               <ImageIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Someone" />
         </ListItem>
-        <Divider />
+        <Divider variant="inset" component="li" />
       </List>
     </Container>
+    </Wrapper>
   );
 };
 

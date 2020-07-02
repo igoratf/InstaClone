@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import Logo from "../../assets/logo-inst.png";
 
@@ -26,6 +26,8 @@ import { faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
 import NotificationsDropdown from '../notifications-dropdown/notifications-dropdown.component';
 
 const Header = () => {
+  const [showNotifications, setShowNotifications] = useState(false);
+
   return (
     <Container>
       <LogoContainer to="/">
@@ -48,7 +50,7 @@ const Header = () => {
           <Icon icon={faCompass} style={{ fontSize: "22px" }} />
           </IconWrapper>
         </LinkContainer>
-        <NotificationsIcon style={{ paddingLeft: "8px", paddingRight: "16px" }}>
+        <NotificationsIcon style={{ paddingLeft: "8px", paddingRight: "16px" }} onClick={() => setShowNotifications(!showNotifications)}>
           <IconWrapper>
             <FavoriteBorderIcon style={{fontSize: "26px"}}/>
           </IconWrapper>
@@ -64,7 +66,7 @@ const Header = () => {
         
       </OptionsContainer>
 
-      <NotificationsDropdown />
+      {showNotifications ? <NotificationsDropdown /> : null}
     </Container>
   );
 };
