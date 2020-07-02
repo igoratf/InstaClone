@@ -10,9 +10,14 @@ align-items: center;
 justify-items: center;
 border-bottom: 1px solid lightgray;
 padding: 0.2rem;
+
+@media screen and (max-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+}
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled(Link)`
+cursor: pointer;
 padding: 0 1rem;
 `;
 
@@ -51,7 +56,7 @@ export const IconWrapper = styled.div`
 cursor: pointer;
 `
 
-export const Icon = styled(FontAwesomeIcon)`
+export const CustomIcon = styled(FontAwesomeIcon)`
 padding: 0;
 cursor: pointer;
 `

@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const ContainerWrapper = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+`;
+
 export const Container = styled.div`
 margin-top: 1rem;
 display: flex;
@@ -29,16 +36,17 @@ export const SliderContainer = styled.div`
 width: 100%; 
 display: flex; 
 justify-content: space-between; 
-position: fixed; 
+position: absolute; 
 max-width: 600px;
 min-width: 100px;
+margin-top: 6px;
 `;
 
 export const ArrowButton = styled.button`
 border-radius: 50%;
 cursor: pointer;
-width: 25px;
-height: 25px;
+width: 27px;
+height: 27px;
 border: none;
 background-color: rgba(240, 240, 240, 0.7);
 outline: none;

@@ -4,6 +4,7 @@ import {
   ButtonContainer,
   ArrowButton,
   SliderContainer,
+  ContainerWrapper,
 } from "./story-container.styles";
 
 import Fab from "@material-ui/core/Fab";
@@ -40,7 +41,8 @@ const StoryContainer = ({ profile }) => {
   };
 
   return (
-    <Container profile={profile ? "profile" : "menu"} id="storyContainer">
+    <ContainerWrapper>
+      <Container profile={profile ? "profile" : "menu"} id="storyContainer">
       <StoryIcon />
       <StoryIcon />
       <StoryIcon />
@@ -48,7 +50,8 @@ const StoryContainer = ({ profile }) => {
       <StoryIcon />
       <StoryIcon />
       <StoryIcon />
-      <SliderContainer>
+    </Container>
+    <SliderContainer>
         <ButtonContainer>
           <ArrowButton
             onClick={() => scrollBack()}
@@ -66,7 +69,8 @@ const StoryContainer = ({ profile }) => {
           </ArrowButton>
         </ButtonContainer>
       </SliderContainer>
-    </Container>
+    </ContainerWrapper>
+    
   );
 };
 

@@ -92,7 +92,7 @@ const PostCard = () => {
   }
 
   return (
-    <Card style={{ width: "500px", margin: '20px 0' }}>
+    <Card style={{ width: "500px", margin: '20px 0' }} variant="outlined">
       <CardHeader
         className={classes.root}
         avatar={
