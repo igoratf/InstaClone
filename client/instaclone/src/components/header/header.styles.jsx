@@ -56,7 +56,7 @@ export const IconWrapper = styled.div`
 cursor: pointer;
 `
 
-export const Icon = styled(FontAwesomeIcon)`
+export const CustomIcon = styled(FontAwesomeIcon)`
 padding: 0;
 cursor: pointer;
 `

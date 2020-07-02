@@ -1,16 +1,19 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
+import { withRouter } from "react-router";
 
 import Logo from "../../assets/logo-inst.png";
 
 import { Link } from 'react-router-dom';
 
 import HomeIcon from "@material-ui/icons/Home";
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+
 import {
   Container,
   OptionsContainer,
   LinkContainer,
   IconWrapper,
-  Icon,
+  CustomIcon,
   AvatarPic,
   LogoImage,
   LogoContainer,
@@ -21,11 +24,12 @@ import SearchBox from '../search-box/search-box.component';
 
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
-import { faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
+import {  faPaperPlane, faCompass } from "@fortawesome/free-regular-svg-icons";
+import { faPaperPlane as solidPlane} from "@fortawesome/free-solid-svg-icons";
 
 import NotificationsDropdown from '../notifications-dropdown/notifications-dropdown.component';
 
-const Header = () => {
+const Header = ({location}) => {
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
@@ -37,17 +41,17 @@ const Header = () => {
       <OptionsContainer>
         <LinkContainer to="/">
           <IconWrapper>
-            <HomeIcon style={{fontSize: "28px"}}/>
+            {location.pathname === "/" ? <HomeIcon style={{fontSize: "28px"}} /> : <HomeOutlinedIcon style={{fontSize: "28px"}}/>}
+          </IconWrapper>
+        </LinkContainer>
+        <LinkContainer to="/direct">
+          <IconWrapper>
+          {location.pathname === "/direct" ? <CustomIcon icon={solidPlane} style={{ fontSize: "20px" }} /> : <CustomIcon icon={faPaperPlane} style={{ fontSize: "20px" }} />}
           </IconWrapper>
         </LinkContainer>
         <LinkContainer>
           <IconWrapper>
-          <Icon icon={faPaperPlane} style={{ fontSize: "20px" }} />
-          </IconWrapper>
-        </LinkContainer>
-        <LinkContainer>
-          <IconWrapper>
-          <Icon icon={faCompass} style={{ fontSize: "22px" }} />
+          <CustomIcon icon={faCompass} style={{ fontSize: "22px" }} />
           </IconWrapper>
         </LinkContainer>
         <NotificationsIcon style={{ paddingLeft: "8px", paddingRight: "16px" }} onClick={() => setShowNotifications(!showNotifications)}>
@@ -71,4 +75,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);
