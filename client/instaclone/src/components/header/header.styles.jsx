@@ -10,6 +10,7 @@ align-items: center;
 justify-items: center;
 border-bottom: 1px solid lightgray;
 padding: 0.2rem;
+width: 100%;
 
 @media screen and (max-width: 500px) {
     grid-template-columns: 1fr 1fr;
@@ -54,6 +55,11 @@ align-items: center;
 
 export const IconWrapper = styled.div`
 cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
 `
 
 export const CustomIcon = styled(FontAwesomeIcon)`

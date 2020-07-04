@@ -97,7 +97,6 @@ const PostCard = () => {
         className={classes.root}
         avatar={
           <Avatar
-            aria-label="recipe"
             src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4"
           />
         }

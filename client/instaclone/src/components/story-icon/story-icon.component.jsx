@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, BorderWrapper, Icon } from "./story-icon.styles";
 
-import Avatar from '@material-ui/core/Avatar';
-
 export default function StoryIcon() {
   return (
     <Container>
