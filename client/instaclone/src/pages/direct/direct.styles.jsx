@@ -30,6 +30,7 @@ grid-template-columns: repeat(3, 1fr);
 justify-items: center;
 align-items: center;
 padding: 15px;
+height: 68px;
 `;
 
 export const Title = styled.h5`
@@ -44,9 +45,9 @@ font-family: font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 `;
 
 export const ConversationContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
+display: grid;
+grid-template-columns: 1fr;
+justify-items: center;
 align-items: center;
 border-left: 1px solid rgba(0, 0, 0, 0.12);
 `;
