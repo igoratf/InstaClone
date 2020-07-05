@@ -7,7 +7,6 @@ import {
   ContainerWrapper,
 } from "./story-container.styles";
 
-import Fab from "@material-ui/core/Fab";
 import StoryIcon from "../story-icon/story-icon.component";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
@@ -22,9 +21,8 @@ const StoryContainer = ({ profile }) => {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
-    console.log(scrollLeft);
     return () => {
-      // cleanup
+      
     };
   }, [scrollLeft]);
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState } from "react";
 import { withRouter } from "react-router";
 
 import Logo from "../../assets/logo-inst.png";
@@ -30,6 +30,7 @@ import { faPaperPlane as solidPlane} from "@fortawesome/free-solid-svg-icons";
 import NotificationsDropdown from '../notifications-dropdown/notifications-dropdown.component';
 
 const Header = ({location}) => {
+  const path = location.pathname;
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
@@ -41,12 +42,12 @@ const Header = ({location}) => {
       <OptionsContainer>
         <LinkContainer to="/">
           <IconWrapper>
-            {location.pathname === "/" ? <HomeIcon style={{fontSize: "28px"}} /> : <HomeOutlinedIcon style={{fontSize: "28px"}}/>}
+            {path === "/" ? <HomeIcon style={{fontSize: "28px"}} /> : <HomeOutlinedIcon style={{fontSize: "28px"}}/>}
           </IconWrapper>
         </LinkContainer>
         <LinkContainer to="/direct">
           <IconWrapper>
-          {location.pathname === "/direct" ? <CustomIcon icon={solidPlane} style={{ fontSize: "20px" }} /> : <CustomIcon icon={faPaperPlane} style={{ fontSize: "20px" }} />}
+          {path === "/direct" ? <CustomIcon icon={solidPlane} style={{ fontSize: "20px" }} /> : <CustomIcon icon={faPaperPlane} style={{ fontSize: "20px" }} />}
           </IconWrapper>
         </LinkContainer>
         <LinkContainer>
@@ -65,6 +66,7 @@ const Header = ({location}) => {
           <AvatarPic
             aria-label="recipe"
             src="https://media-exp1.licdn.com/dms/image/C4D03AQEv7o0R6e3MGA/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=Nb1zRgdreXpwrx8pfd7ta4_0s4KK6aaeMPyXWiSI6U4"
+            style={path === "/profile" ? {border: '1px solid black'} : null}
           />
         </Link>
         

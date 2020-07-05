@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Paper from '@material-ui/core/Paper';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Container = styled.div`
 display: flex;
@@ -79,3 +80,12 @@ export const PlaceholderSubtitle = styled.p`
 color: rgba(0, 0, 0, 0.54);
 margin-bottom: 25px;
 `;
+
+export const DirectIcon = styled(FontAwesomeIcon)`
+&& {
+    margin-left: auto;
+    font-size: 24px; 
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+`

@@ -16,8 +16,9 @@ import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 
-import { FormContainer, OptionsIcon, CommentTextArea, PostButton, CommentsContainer } from './post-card.styles';
+import { FormContainer, OptionsIcon, CommentTextArea, CleanButton, CommentsContainer } from './post-card.styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,29 +43,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const comments = [
-  {
-    id: 1,
-    author: 'teste',
-    content: 'Testando comentário'
-  },
-  {
-    id: 2,
-    author: 'teste',
-    content: 'Testando comentário'
-  },
-  {
-    id: 3,
-    author: 'teste',
-    content: 'Testando comentário'
-  }
 ];
 
-const lastId = 4;
+const lastId = 1;
 
 const PostCard = () => {
   const [text, setText] = useState('');
   const [commentList, setCommentList] = useState(comments);
   const [liked, setLiked] = useState(false);
+  const [bookmarked, setBookmarked] = useState(false);
+  
   const classes = useStyles();
 
   const likePost = () => {
@@ -117,14 +105,14 @@ const PostCard = () => {
         <IconButton aria-label="add to favorites" onClick={likePost}>
           {liked ? <FavoriteIcon style={{color: 'red'}}/> : <FavoriteBorderIcon />}
         </IconButton>
-        <IconButton>
+        <IconButton aria-label="comment">
           <ChatBubbleOutlineIcon />
         </IconButton>
         <IconButton aria-label="share">
           <SendOutlinedIcon />
         </IconButton>
-        <IconButton aria-label="bookmark" style={{marginLeft: 'auto'}}>
-          <BookmarkBorderIcon/>
+        <IconButton aria-label="bookmark" style={{marginLeft: 'auto'}} onClick={() => setBookmarked(!bookmarked)}>
+          {bookmarked ? <BookmarkIcon style={{color: '#262626'}}/> : <BookmarkBorderIcon/>}
         </IconButton>
       </CardActions>
       <CardContent>
@@ -136,9 +124,9 @@ const PostCard = () => {
       <CardActions>
         <FormContainer>
           <CommentTextArea rows="1" placeholder="Add a comment..." value={text} onChange={(event) => onChangeText(event)}></CommentTextArea>
-          <PostButton disabled={!text} onClick={postComment}>
+          <CleanButton disabled={!text} onClick={postComment}>
         Post
-      </PostButton>
+      </CleanButton>
         </FormContainer>
       </CardActions>
     </Card>

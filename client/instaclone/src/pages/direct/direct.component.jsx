@@ -17,16 +17,27 @@ import {
   PlaceholderTitlte,
   PlaceHolderIconContainer,
   PlaceholderSubtitle,
+  DirectIcon
 } from "./direct.styles";
-import CreateIcon from "@material-ui/icons/Create";
 import CustomButton from "../../components/custom-button/custom-button.component";
 
-import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import { faPaperPlane, faEdit } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Conversation from "../../components/conversation/conversation.component";
+import CustomDialog from "../../components/custom-dialog/custom-dialog.component";
+
 
 const Direct = () => {
-  const [conversationVisible, setConversationVisible] = useState(false);
+  const [conversationVisible, setConversationVisible] = useState(true);
+  const [dialogOpened, setDialogOpened] = useState(false);
+
+  const openDialog = () => {
+    setDialogOpened(true);
+  }
+
+  const closeDialog = () => {
+    setDialogOpened(false);
+  }
 
   return (
     <Container>
@@ -34,7 +45,7 @@ const Direct = () => {
         <DirectListContainer>
           <DirectPageHeader>
             <Title>Direct</Title>
-            <CreateIcon style={{ marginLeft: "auto", fontSize: "30px" }} />
+            <DirectIcon icon={faEdit} onClick={openDialog}/>
           </DirectPageHeader>
           <Divider />
 
@@ -67,7 +78,7 @@ const Direct = () => {
           </List>
         </DirectListContainer>
 
-        <ConversationContainer onClick={() => setConversationVisible(!conversationVisible)}>
+        <ConversationContainer>
           {conversationVisible ? (
             <MessagesPlaceholder>
               <PlaceHolderIconContainer>
@@ -82,6 +93,7 @@ const Direct = () => {
               </PlaceholderSubtitle>
               <CustomButton
                 style={{ fontWeight: "bold", width: "fit-content" }}
+                onClick={openDialog}
               >
                 Send Message
               </CustomButton>
@@ -91,6 +103,8 @@ const Direct = () => {
           )}
         </ConversationContainer>
       </PageContainer>
+
+      <CustomDialog open={dialogOpened} onClose={closeDialog} />
     </Container>
   );
 };

@@ -22,7 +22,7 @@ outline: none;
 resize: none;
 `;
 
-export const PostButton = styled(Button)`
+export const CleanButton = styled(Button)`
 && {
     text-transform: none;
     opacity: ${props => props.disabled ? 0.3 : 1};
