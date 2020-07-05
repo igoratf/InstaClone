@@ -45,6 +45,8 @@ const SignUp = () => {
         setPasswordError('Must be at least 8 characters long');
       } else if (signUpForm[input].length < 4) {
         switch(input) {
+          default:
+            break;
           case "email":
             setEmailError('Invalid email');
             break;
