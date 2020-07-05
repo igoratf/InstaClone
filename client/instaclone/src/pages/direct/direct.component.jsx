@@ -17,6 +17,7 @@ import {
   PlaceholderTitlte,
   PlaceHolderIconContainer,
   PlaceholderSubtitle,
+  DirectIcon
 } from "./direct.styles";
 import CustomButton from "../../components/custom-button/custom-button.component";
 
@@ -44,7 +45,7 @@ const Direct = () => {
         <DirectListContainer>
           <DirectPageHeader>
             <Title>Direct</Title>
-            <FontAwesomeIcon icon={faEdit} style={{marginLeft: "auto", fontSize: "20px",  marginBottom: 3}}/>
+            <DirectIcon icon={faEdit} onClick={openDialog}/>
           </DirectPageHeader>
           <Divider />
 

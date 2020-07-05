@@ -19,5 +19,13 @@ padding: 8px;
 `;
 
 export const SuggestedTitle = styled.h4`
-margin: 8px 0 8px 8px;
+margin: 8px 0 8px 4px;
+`;
+
+export const DialogHeader = styled.div`
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px 0;
 `;

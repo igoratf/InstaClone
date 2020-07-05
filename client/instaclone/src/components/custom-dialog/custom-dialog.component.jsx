@@ -16,6 +16,7 @@ import {
   SearchContainer,
   SuggestedContainer,
   SuggestedTitle,
+  DialogHeader
 } from "./custom-dialog.styles";
 import { CleanButton } from "../../components/post-card/post-card.styles";
 
@@ -23,15 +24,7 @@ const CustomDialog = ({ open, onClose }) => {
   return (
     <Dialog open={open} onClose={onClose} style={{ overflow: "hidden" }}>
       <Container style={{ width: 360 }}>
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "5px 0",
-          }}
-        >
+        <DialogHeader>
           <button
             style={{
               background: "none",
@@ -40,11 +33,11 @@ const CustomDialog = ({ open, onClose }) => {
               cursor: "pointer",
             }}
           >
-            <CloseIcon />
+            <CloseIcon onClick={onClose}/>
           </button>
           <h3>New Message</h3>
           <CleanButton disabled>Next</CleanButton>
-        </div>
+        </DialogHeader>
         <Divider />
 
         <SearchContainer>
