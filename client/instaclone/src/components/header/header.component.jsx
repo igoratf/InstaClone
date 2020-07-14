@@ -42,7 +42,7 @@ const Header = ({location}) => {
       <OptionsContainer>
         <LinkContainer to="/">
           <IconWrapper>
-            {path === "/" ? <HomeIcon style={{fontSize: "28px"}} /> : <HomeOutlinedIcon style={{fontSize: "28px"}}/>}
+            {path === "/feed" ? <HomeIcon style={{fontSize: "28px"}} /> : <HomeOutlinedIcon style={{fontSize: "28px"}}/>}
           </IconWrapper>
         </LinkContainer>
         <LinkContainer to="/direct">
