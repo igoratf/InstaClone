@@ -15,9 +15,11 @@ import {
 } from "./login.styles";
 
 import { theme } from '../../styles.config';
+import { useHistory } from "react-router-dom";
 const { textField } = theme;
 
 const LoginPage = () => {
+  const history = useHistory();
   const [userCredentials, setUserCredentials] = useState({email: '', password: ''});
   const [errorMessages, setErrorMessages] = useState({emailError: '', passwordError: ''});
 
@@ -35,7 +37,10 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    validateForm();
+    let valid = validateForm();
+    if (valid) {
+      history.push('/feed');
+    }
 
   }
 
