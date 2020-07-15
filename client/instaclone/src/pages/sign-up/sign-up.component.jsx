@@ -10,9 +10,10 @@ import {
   InputField,
   ButtonContainer,
   CardFooter,
-  SecondaryCard,
-  AnchorButton,
+  SecondaryCard
 } from "./sign-up.styles";
+
+import AnchorButton from '../../components/anchor-button/anchor-button.component';
 
 import { theme } from '../../styles.config';
 const { textField } = theme;
@@ -141,7 +142,7 @@ const SignUp = () => {
       </SignUpContainer>
 
       <SecondaryCard variant="outlined">
-        Have an account? <AnchorButton>Log in</AnchorButton>
+        Have an account? <AnchorButton to="/signin">Log in</AnchorButton>
       </SecondaryCard>
     </Container>
   );

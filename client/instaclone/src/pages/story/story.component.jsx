@@ -12,7 +12,7 @@ import {
   MessageInputContainer,
   SendButton,
   OptionsContainer,
-  Content
+  Content,
 } from "./story.styles";
 
 import Avatar from "@material-ui/core/Avatar";
@@ -56,35 +56,33 @@ const Story = () => {
           </OptionsContainer>
         </Header>
         <Content>
-          <div>
-            
-          </div>
+          <div></div>
           Content
           <Footer>
-          <Snackbar
-            anchorOrigin={{ vertical, horizontal }}
-            open={open}
-            onClose={handleClose}
-            message="Message sent!"
-            key={vertical + horizontal}
-            style={{ bottom: "10vh" }}
-          />
+            <Snackbar
+              anchorOrigin={{ vertical, horizontal }}
+              open={open}
+              onClose={handleClose}
+              message="Message sent!"
+              key={vertical + horizontal}
+              style={{ bottom: "10vh" }}
+            />
 
-          <MessageBox>
-            <MessageInputContainer>
-              <MessageInput
-                placeholder="Send a message..."
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-                value={message}
-                onChange={(e) => onChangeMessage(e)}
-              />
-            </MessageInputContainer>
-          </MessageBox>
-          <SendButton onClick={() => onSubmitMessage()}>
-            <SendOutlinedIcon />
-          </SendButton>
-        </Footer>
+            <MessageBox>
+              <MessageInputContainer>
+                <MessageInput
+                  placeholder="Send a message..."
+                  onFocus={() => setIsFocused(true)}
+                  onBlur={() => setIsFocused(false)}
+                  value={message}
+                  onChange={(e) => onChangeMessage(e)}
+                />
+              </MessageInputContainer>
+            </MessageBox>
+            <SendButton onClick={() => onSubmitMessage()}>
+              <SendOutlinedIcon />
+            </SendButton>
+          </Footer>
         </Content>
       </StoryWrapper>
     </Container>

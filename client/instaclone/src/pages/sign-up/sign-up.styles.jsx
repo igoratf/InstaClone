@@ -90,10 +90,3 @@ ${formCardSize};
 
 padding: 20px;
 `;
-
-export const AnchorButton = styled.a`
-color: ${primaryColor};
-text-align: center;
-
-${anchorStyles};
-`;

@@ -21,7 +21,7 @@ function App({ location }) {
       ) : null}
       <Switch>
         <Route exact path="/">
-          <Redirect to="/feed" />
+          <Redirect to="/signin" />
         </Route>
         <Route exact path="/feed" component={FeedPage} />
         <Route exact path="/signup" component={SignUpPage} />

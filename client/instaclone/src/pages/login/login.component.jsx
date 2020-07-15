@@ -101,7 +101,7 @@ const LoginPage = () => {
       </LoginContainer>
 
       <SecondaryCard variant="outlined">
-        Don't have an account? <AnchorButton>Sign Up</AnchorButton>
+        Don't have an account? <AnchorButton to="/signup">Sign Up</AnchorButton>
       </SecondaryCard>
     </Container>
   );
