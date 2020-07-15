@@ -106,4 +106,5 @@ color: white;
 background: transparent;
 border: none;
 cursor: pointer;
+outline: none;
 `;
