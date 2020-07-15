@@ -12,30 +12,35 @@ import {
   MessageInputContainer,
   SendButton,
   OptionsContainer,
+  Content
 } from "./story.styles";
 
 import Avatar from "@material-ui/core/Avatar";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
-import Snackbar from '@material-ui/core/Snackbar';
+import Snackbar from "@material-ui/core/Snackbar";
 
 const Story = () => {
   const [isFocused, setIsFocused] = useState(false);
-  const [message, setMessage] = useState('');
-  const [snack, setSnack] = useState({open: false, vertical: 'bottom', horizontal: 'center'});
-  const {open, vertical, horizontal} = snack;
+  const [message, setMessage] = useState("");
+  const [snack, setSnack] = useState({
+    open: false,
+    vertical: "bottom",
+    horizontal: "center",
+  });
+  const { open, vertical, horizontal } = snack;
 
   const onChangeMessage = (event) => {
     setMessage(event.target.value);
-  }
+  };
 
   const onSubmitMessage = () => {
-    setSnack({...snack, open: true});
-    setMessage('');
-  }
+    setSnack({ ...snack, open: true });
+    setMessage("");
+  };
 
   const handleClose = () => {
-    setSnack({...snack, open: false});
-  }
+    setSnack({ ...snack, open: false });
+  };
 
   return (
     <Container>
@@ -50,16 +55,20 @@ const Story = () => {
             <StoryOptions />
           </OptionsContainer>
         </Header>
-
-        <Footer>
-        <Snackbar
-            anchorOrigin={{vertical, horizontal}}
+        <Content>
+          <div>
+            
+          </div>
+          Content
+          <Footer>
+          <Snackbar
+            anchorOrigin={{ vertical, horizontal }}
             open={open}
             onClose={handleClose}
             message="Message sent!"
             key={vertical + horizontal}
-            style={{bottom: '10vh'}}
-            />
+            style={{ bottom: "10vh" }}
+          />
 
           <MessageBox>
             <MessageInputContainer>
@@ -72,11 +81,11 @@ const Story = () => {
               />
             </MessageInputContainer>
           </MessageBox>
-            <SendButton onClick={() => onSubmitMessage()}>
-              <SendOutlinedIcon />
-            </SendButton>
-
+          <SendButton onClick={() => onSubmitMessage()}>
+            <SendOutlinedIcon />
+          </SendButton>
         </Footer>
+        </Content>
       </StoryWrapper>
     </Container>
   );
