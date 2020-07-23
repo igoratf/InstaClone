@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import Card from "@material-ui/core/Card";
 import Button from '@material-ui/core/Button';
+
+export const Container = styled(Card)`
+min-width: 300px;
+max-width: 500px;
+width: 100%;
+margin: 20px 0;
+`;
 
 export const FormContainer = styled.form`
 display: flex;
