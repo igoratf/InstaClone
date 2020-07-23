@@ -51,6 +51,12 @@ grid-template-columns: 1fr;
 justify-items: center;
 align-items: center;
 border-left: 1px solid rgba(0, 0, 0, 0.12);
+min-height: 50vh;
+
+@media screen and (max-width: 375px) {
+    min-height: 70vh;
+}
+
 `;
 
 export const MessagesPlaceholder = styled.div`
@@ -58,6 +64,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+padding: 0 2vw;
 `;
 
 export const PlaceHolderIconContainer = styled.div`
