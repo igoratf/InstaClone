@@ -21,7 +21,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-border: 1px solid white;
 margin: 15px;
 `;
 
@@ -106,4 +105,16 @@ color: white;
 background: transparent;
 border: none;
 cursor: pointer;
+outline: none;
+`;
+
+export const Content = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+color: white;
+background-color: dimgray;
 `;

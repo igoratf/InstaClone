@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import CustomButton from "../../components/custom-button/custom-button.component";
 import {
@@ -10,14 +11,17 @@ import {
   InputField,
   ButtonContainer,
   CardFooter,
-  SecondaryCard,
-  AnchorButton,
+  SecondaryCard
 } from "./sign-up.styles";
+
+import AnchorButton from '../../components/anchor-button/anchor-button.component';
 
 import { theme } from '../../styles.config';
 const { textField } = theme;
 
 const SignUp = () => {  
+  const history = useHistory();
+
   const [signUpForm, setSignUpForm] = useState({email: '', name: '', username: '', password: ''});
   const [emailError, setEmailError] = useState('');
   const [nameError, setNameError] = useState('');
@@ -35,11 +39,15 @@ const SignUp = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    validateSignUpForm();
+    let valid = validateSignUpForm();
+    if (valid) {
+      history.push('/signin');
+    }
+
   }
 
   const validateSignUpForm = () => {
-
+    let valid = true;
     Object.keys(signUpForm).forEach(input => {
       if (input === "password" && signUpForm[input].length < 8) {
         setPasswordError('Must be at least 8 characters long');
@@ -49,16 +57,21 @@ const SignUp = () => {
             break;
           case "email":
             setEmailError('Invalid email');
+            valid = false;
             break;
           case "name":
             setNameError('Must be at least 4 characters long');
+            valid = false;
             break;
           case "username":
             setUsernameError('Must be at least 4 characters long');
+            valid = false;
             break;
         }
       }
-    })
+    });
+
+    return valid;
     
   }
 
@@ -141,7 +154,7 @@ const SignUp = () => {
       </SignUpContainer>
 
       <SecondaryCard variant="outlined">
-        Have an account? <AnchorButton>Log in</AnchorButton>
+        Have an account? <AnchorButton to="/signin">Log in</AnchorButton>
       </SecondaryCard>
     </Container>
   );

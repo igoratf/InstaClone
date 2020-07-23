@@ -12,13 +12,35 @@ import {
   MessageInputContainer,
   SendButton,
   OptionsContainer,
+  Content,
 } from "./story.styles";
 
 import Avatar from "@material-ui/core/Avatar";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import Snackbar from "@material-ui/core/Snackbar";
 
 const Story = () => {
   const [isFocused, setIsFocused] = useState(false);
+  const [message, setMessage] = useState("");
+  const [snack, setSnack] = useState({
+    open: false,
+    vertical: "bottom",
+    horizontal: "center",
+  });
+  const { open, vertical, horizontal } = snack;
+
+  const onChangeMessage = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const onSubmitMessage = () => {
+    setSnack({ ...snack, open: true });
+    setMessage("");
+  };
+
+  const handleClose = () => {
+    setSnack({ ...snack, open: false });
+  };
 
   return (
     <Container>
@@ -33,21 +55,35 @@ const Story = () => {
             <StoryOptions />
           </OptionsContainer>
         </Header>
+        <Content>
+          <div></div>
+          Content
+          <Footer>
+            <Snackbar
+              anchorOrigin={{ vertical, horizontal }}
+              open={open}
+              onClose={handleClose}
+              message="Message sent!"
+              key={vertical + horizontal}
+              style={{ bottom: "10vh" }}
+            />
 
-        <Footer>
-          <MessageBox>
-            <MessageInputContainer>
-              <MessageInput
-                placeholder="Send a message..."
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-              />
-            </MessageInputContainer>
-          </MessageBox>
-            <SendButton style={isFocused ? {width: 0, opacity: 0} : null}>
+            <MessageBox>
+              <MessageInputContainer>
+                <MessageInput
+                  placeholder="Send a message..."
+                  onFocus={() => setIsFocused(true)}
+                  onBlur={() => setIsFocused(false)}
+                  value={message}
+                  onChange={(e) => onChangeMessage(e)}
+                />
+              </MessageInputContainer>
+            </MessageBox>
+            <SendButton onClick={() => onSubmitMessage()}>
               <SendOutlinedIcon />
             </SendButton>
-        </Footer>
+          </Footer>
+        </Content>
       </StoryWrapper>
     </Container>
   );

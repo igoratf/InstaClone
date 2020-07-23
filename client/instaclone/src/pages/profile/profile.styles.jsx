@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Avatar from "@material-ui/core/Avatar";
 
 const textColor = "#262626";
 
@@ -16,6 +17,19 @@ width: 100%;
 && {
     & > * {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+`;
+
+
+export const UserPhoto = styled(Avatar)`
+&& {
+    height: 130px;
+    width: 130px;
+
+    @media screen and (max-width: 360px) {
+        height: 115px;
+        width: 115px;
     }
 }
 `;
@@ -52,6 +66,7 @@ font-size: 28px;
 line-height: 32px;
 font-weight: 300;
 text-align: left;
+padding: 0 0.75rem;
 `;
 
 export const UserInfo = styled.div`
@@ -130,6 +145,7 @@ grid-gap: 1rem;
 align-items: center;
 justify-items: center;
 max-width: 60vw;
+padding: 0 2vw;
 padding-bottom: 5vh;
 
 @media screen and (max-width: 600px) {
@@ -152,8 +168,8 @@ width: 100%;
 height: 100%;
 max-height: 275px;
 max-width: 275px;
-min-height: 125px;
-min-width: 125px;
+min-height: 100px;
+min-width: 100px;
 `;
 
 export const Overlay = styled.div`

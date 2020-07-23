@@ -5,6 +5,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
+padding: 0 2vw;
+position: relative;
 `;
 
 export const Container = styled.div`

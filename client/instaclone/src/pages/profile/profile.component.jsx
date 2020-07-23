@@ -21,7 +21,8 @@ import {
   OverlayText,
   EditButton,
   UserName,
-  NameTitle
+  NameTitle,
+  UserPhoto
 } from "./profile.styles";
 
 import StoryContainer from "../../components/story-container/story-container.component";
@@ -31,19 +32,18 @@ const Profile = () => {
   return (
     <Container>
       <Header>
-        <Avatar
-          style={{ height: 150, width: 150 }}
+        <UserPhoto
           src={
             "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
           }
         >
           A
-        </Avatar>
+        </UserPhoto>
         <UserInfo>
           <OptionsContainer>
             <UserName>igoratf</UserName>
             <EditButton>Edit Profile</EditButton>
-            <SettingsIcon style={{ paddingLeft: "1rem", cursor: "pointer" }} />
+            <SettingsIcon style={{ paddingLeft: "0.75rem", cursor: "pointer" }} />
           </OptionsContainer>
 
           <InfoContainer>
