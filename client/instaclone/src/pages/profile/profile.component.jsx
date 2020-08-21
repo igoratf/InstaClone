@@ -1,8 +1,7 @@
 import React from "react";
-import Avatar from "@material-ui/core/Avatar";
 import SettingsIcon from "@material-ui/icons/Settings";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ModeCommentIcon from '@material-ui/icons/ModeComment';
+
+import PostMedia from '../../components/post-media/post-media.component';
 
 import {
   Container,
@@ -73,101 +72,8 @@ const Profile = () => {
       </ProfileFeed>
 
       <MediaMosaic>
-        <MediaContainer>
-          <Media
-            src={
-              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
-            }
-          />
-          <Overlay>
-            <OverlayInfoContainer>
-              <OverlayInfo>
-                <FavoriteIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-              <OverlayInfo>
-                <ModeCommentIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-            </OverlayInfoContainer>
-          </Overlay>
-        </MediaContainer>
-        <MediaContainer>
-          <Media
-            src={
-              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
-            }
-          />
-          <Overlay>
-            <OverlayInfoContainer>
-              <OverlayInfo>
-                <FavoriteIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-              <OverlayInfo>
-                <ModeCommentIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-            </OverlayInfoContainer>
-          </Overlay>
-        </MediaContainer>
-        <MediaContainer>
-          <Media
-            src={
-              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
-            }
-          />
-          <Overlay>
-            <OverlayInfoContainer>
-              <OverlayInfo>
-                <FavoriteIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-              <OverlayInfo>
-                <ModeCommentIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-            </OverlayInfoContainer>
-          </Overlay>
-        </MediaContainer>
-        <MediaContainer>
-          <Media
-            src={
-              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
-            }
-          />
-          <Overlay>
-            <OverlayInfoContainer>
-              <OverlayInfo>
-                <FavoriteIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-              <OverlayInfo>
-                <ModeCommentIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-            </OverlayInfoContainer>
-          </Overlay>
-        </MediaContainer>
-        <MediaContainer>
-          <Media
-            src={
-              "https://media-exp1.licdn.com/dms/image/C5603AQGILi-KLXR1DQ/profile-displayphoto-shrink_400_400/0?e=1597276800&v=beta&t=jkHVWOiRiOOFpO2CmLunXSDiHHc-gDqTGPhn15XrcpI"
-            }
-          />
-          <Overlay>
-            <OverlayInfoContainer>
-              <OverlayInfo style={{marginRight: '1rem'}}>
-                <FavoriteIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-              <OverlayInfo>
-                <ModeCommentIcon />
-                <OverlayText>275</OverlayText>
-              </OverlayInfo>
-            </OverlayInfoContainer>
-          </Overlay>
-        </MediaContainer>
+        <PostMedia />
+        
       </MediaMosaic>
     </Container>
   );

@@ -13,7 +13,7 @@ margin: 20px 0;
 
 export const FormContainer = styled.form`
 display: flex;
-flex-grow: 1; 
+flex-grow: 1;
 justify-content: center;
 align-items: center;
 `;

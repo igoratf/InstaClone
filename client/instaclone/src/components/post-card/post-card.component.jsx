@@ -94,7 +94,7 @@ const PostCard = () => {
             <OptionsIcon />
           </IconButton>
         }
-        title="Ada Meira"
+        title="Igor Farias"
         subheader="June 12, 2020"
       />
       <CardMedia
