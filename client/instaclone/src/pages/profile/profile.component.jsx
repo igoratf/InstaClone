@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import SettingsIcon from "@material-ui/icons/Settings";
-
-import PostMedia from '../../components/post-media/post-media.component';
 
 import {
   Container,
@@ -11,23 +9,26 @@ import {
   OptionsContainer,
   PersonalInfoContainer,
   ProfileFeed,
-  MediaMosaic,
-  Media,
-  MediaContainer,
-  Overlay,
-  OverlayInfoContainer,
-  OverlayInfo,
-  OverlayText,
   EditButton,
   UserName,
   NameTitle,
   UserPhoto
 } from "./profile.styles";
 
+import MediaMosaic from '../../components/media-mosaic/media-mosaic.component';
 import StoryContainer from "../../components/story-container/story-container.component";
 import CustomTabs from "../../components/custom-tabs/custom-tabs.component";
 
 const Profile = () => {
+  const [profilePosts, setProfilePosts] = useState([]);
+
+  const onImageUpload = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      let img = event.target.files[0];
+      setProfilePosts([...profilePosts, URL.createObjectURL(img)]);
+    }
+  }
+
   return (
     <Container>
       <Header>
@@ -66,15 +67,15 @@ const Profile = () => {
         </UserInfo>
       </Header>
       <StoryContainer profile={true} />
-
+      <div>
+        <label for="imgPost">New image</label>
+        <input type="file" id="imgPost" name="imgPost" onChange={onImageUpload} accept="image/*" style={{display: 'none'}}/>
+      </div>
       <ProfileFeed>
         <CustomTabs />
       </ProfileFeed>
 
-      <MediaMosaic>
-        <PostMedia />
-        
-      </MediaMosaic>
+      <MediaMosaic profilePosts={profilePosts}/>
     </Container>
   );
 };
