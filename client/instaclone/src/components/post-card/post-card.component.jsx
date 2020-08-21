@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -94,7 +93,7 @@ const PostCard = () => {
             <OptionsIcon />
           </IconButton>
         }
-        title="Ada Meira"
+        title="Igor Farias"
         subheader="June 12, 2020"
       />
       <CardMedia
