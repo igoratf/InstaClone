@@ -1,16 +1,13 @@
 import React from 'react';
-import Avatar from "@material-ui/core/Avatar";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ModeCommentIcon from '@material-ui/icons/ModeComment';
-import { MediaContainer, Media, Overlay, OverlayText, OverlayInfo, OverlayInfoContainer } from './post-media.styles';
+import { MediaContainer, Media, Overlay, OverlayText, OverlayInfo, OverlayInfoContainer } from './profile-media.styles';
 
-const PostMedia = () => {
+const ProfileMedia = ({imageUrl}) => {
     return (
         <MediaContainer>
           <Media
-            src={
-              "https://avatars3.githubusercontent.com/u/23489054?s=460&u=0e0e7e963d782b032fa851c83955cd7f937279a8&v=4"
-            }
+            src={imageUrl}
           />
           <Overlay>
             <OverlayInfoContainer>
@@ -28,4 +25,4 @@ const PostMedia = () => {
     )
 }
 
-export default PostMedia
+export default ProfileMedia

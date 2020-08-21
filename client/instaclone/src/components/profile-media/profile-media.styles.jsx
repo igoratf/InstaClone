@@ -6,15 +6,19 @@ width: 100%;
 cursor: pointer;
 max-height: 275px;
 max-width: 275px;
+min-height: 100px;
+min-width: 100px;
 &:hover > div{
     display: block;
 }
 `
 export const Media = styled.img`
-width: 100%;
-height: 100%;
-min-height: 100px;
-min-width: 100px;
+width: inherit;
+height: inherit;
+max-width: inherit;
+max-height: inherit;
+min-width: inherit;
+max-height: inherit;
 `;
 
 export const Overlay = styled.div`
