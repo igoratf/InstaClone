@@ -38,10 +38,14 @@ export const LikeButton = styled(FavoriteBorderIcon)`
 }
 `;
 
+LikeButton.displayName = "LikeButton";
+
 export const LikeButtonFilled = styled(FavoriteIcon)`
 && {
     font-size: 14px;
     color: red;
     cursor:pointer;
 }
-`
+`;
+
+LikeButtonFilled.displayName = "DislikeButton";
